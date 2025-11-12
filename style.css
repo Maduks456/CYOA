@@ -1,0 +1,58 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main_front {
+  width: 100%;
+  height: 75%;
+  background-color: blue;
+}
+.main_task {
+  width: 100%;
+  height: 25%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main_task_text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  background-color: red;
+  margin-bottom: 5px;
+  justify-content: space-evenly;
+}
+.main_task_text-maintext {
+  width: 75%;
+  height: 100%;
+  background-color: pink;
+}
+.main_task_text-mainbutton {
+  width: 5%;
+  height: 100%;
+  background-color: gray;
+}
+.main_task_answers {
+  width: 100%;
+  height: 30%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.main_task_answers_answer {
+  width: 45%;
+  height: 100%;
+  background-color: pink;
+}
+
+#mai {
+  font-size: 40px;
+  font-style: italic;
+  text-align: center;
+  align-content: center;
+}/*# sourceMappingURL=style.css.map */

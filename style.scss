@@ -1,0 +1,60 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    &_front{
+        width: 100%;
+        height: 75%;
+        background-color: blue ;
+    }
+    &_task{
+        width: 100%;
+        height: 25%;
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+       gap: 10px;
+        &_text{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 50px;
+            background-color: red;
+            margin-bottom: 5px;
+            justify-content: space-evenly;
+            &-maintext{
+                width: 75%;
+                height: 100%;
+                background-color: pink;
+            }
+            &-mainbutton{
+                width: 5%;
+                height: 100%;
+                background-color: gray;
+            }
+        }
+        &_answers{
+            width: 100%;
+            height: 30%;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            &_answer{
+                width: 45%;
+                height: 100%;
+                background-color: pink;
+            }
+        }
+    }
+}
+#mai{
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+    align-content: center;
+
+}
