@@ -6,9 +6,51 @@
     flex-direction: column;
 
     &_front{
+        display: flex;
         width: 100%;
         height: 75%;
         background-color: blue ;
+        justify-content: center;
+        &_Endings{
+            display: none;
+            align-self: center;
+            flex-direction: column;
+            width: 80%;
+            height: 93%;
+            background-color: black;
+            border-radius: 10px;
+            &-days{
+                display: none;
+                align-content: center;
+                text-align: center;
+                font-size: 40px;
+                margin-top: 5px;
+                align-self: center;
+                background-color: aqua;
+                width: 40%;
+                height: 50px;
+            }
+            &-maintext{
+                display: none;
+                padding: 5px;
+                margin-top: 5px;
+                align-self: center;
+                background-color: aqua;
+                width: 95%;
+                height: 70%;
+                font-size: 30px;
+            }
+                &_button{
+                display: none;
+                align-content: center;
+                justify-content: space-evenly;
+                margin-top: 5px;
+                align-self: center;
+                background-color: aqua;
+                width: 40%;
+                height: 50px;
+            }
+        }
     }
     &_task{
         width: 100%;
@@ -51,10 +93,24 @@
         }
     }
 }
-#mai{
-    font-size: 40px;
-    font-style: italic;
-    text-align: center;
-    align-content: center;
-
+.day1{
+    display: none;
+}
+.day2{
+  display: none;
+}
+.day3{
+    display: none;
+}
+#next2{
+    display: none;
+}
+#next3{
+    display: none ;
+}
+#button1{
+    display: none;
+}
+#button2{
+    display: none;
 }

@@ -3,53 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYOA </title>
+    <title>CYOA test</title>
     <link rel="stylesheet" href="style.css">
      
 </head>
 <body>
-    <script type="text/javascript" scr="day1.js" defer></script>
+<script src="Javascript/nextday.js" defer></script>
+<script src="Javascript/day1.js" defer></script>
+<script src="Javascript/day2.js" defer></script>
     <div class="main">
-        <div class="main_front" id="mai">
-          <div class="main_front_title">
+        <div class="main_front">
+          <div class="main_front_Endings" id="end">
+            <div class="main_front_Endings-days " id="days">
+                day1
+            </div>
+            <div class="main_front_Endings-maintext" id="maintext"> 
 
-          </div>
+            </div>
+            <div class="main_front_Endings_button" id="button">
+                <button id="button1" onclick="ToDay2()">Next Day2</button>
+                <button id="button2" onclick="ToDay3()">Next Day3</button>
+                <button id="button3" onclick="ToDay4()">Next Day4</button>
+            </div>
+        </div>
 
         </div>
         <div class="main_task">
             <div class="main_task_text" >
                 <div class="main_task_text-maintext" id="q">Its the first day of school and you dont know where to go.</div>
                 <div class="main_task_text-mainbutton">
-                    <button onclick="FrText()">
+                    <button onclick="FrText()" id="next">
                         Next
+                    </button>
+                    <button onclick="Next2()" id="next2">
+                        Next2
+                    </button>
+                    <button onclick="Next3()" id="next3">
+                        Next3
                     </button>
                 </div>
             </div>
             <div class="main_task_answers">
                 <div class="main_task_answers_answer">
-
-                        <button onclick=" GetAnswer1()" id="ans1">
-                            yes
-                        </button>                 
+                        <button class="day1" onclick=" GetAnswer1()" id="ans1">
+                        </button>
+                        <button class="day2" onclick=" getAnswer1()" id="ans12">
+                        </button>
+                        <button class="day3" onclick=" getanswer1()" id="ans13">
+                        </button>                                                          
                 </div>
                 <div class="main_task_answers_answer">
-                        <button onclick=" GetAnswer2()" id="ans2">
-                            no
-                        </button>                 
+                        <button class="day1" onclick=" GetAnswer2()" id="ans2">
+                        </button> 
+                        <button class="day2" onclick=" getAnswer2()" id="ans22">
+                        </button>
+                        <button class="day3" onclick=" getanswer3()" id="ans23">
+                        </button>                                
                 </div>
             </div>
             <div class="main_task_answers">
                 <div class="main_task_answers_answer">
-                    
-                        <button onclick=" GetAnswer3()" id="ans3">
-                            not really
+                        <button class="day1" onclick=" GetAnswer3()" id="ans3">
                         </button>                 
-                
+                        <button class="day2" onclick=" getAnswer3()" id="ans32">
+                        </button>
+                        <button class="day3" onclick=" getanswer3()" id="ans33">
+                        </button>                
                 </div>
                 <div class="main_task_answers_answer">
-                        <button onclick=" GetAnswer4()" id="ans4">
-                            I dont hate it but dont love it
-                        </button>                 
+                        <button class="day1" onclick=" GetAnswer4()" id="ans4">
+                        </button>                          
                 </div>
             </div>
         </div>
@@ -57,4 +80,3 @@
 
 </body>
 </html>
-    

@@ -5,9 +5,51 @@
   flex-direction: column;
 }
 .main_front {
+  display: flex;
   width: 100%;
   height: 75%;
   background-color: blue;
+  justify-content: center;
+}
+.main_front_Endings {
+  display: none;
+  align-self: center;
+  flex-direction: column;
+  width: 80%;
+  height: 93%;
+  background-color: black;
+  border-radius: 10px;
+}
+.main_front_Endings-days {
+  display: none;
+  align-content: center;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 5px;
+  align-self: center;
+  background-color: aqua;
+  width: 40%;
+  height: 50px;
+}
+.main_front_Endings-maintext {
+  display: none;
+  padding: 5px;
+  margin-top: 5px;
+  align-self: center;
+  background-color: aqua;
+  width: 95%;
+  height: 70%;
+  font-size: 30px;
+}
+.main_front_Endings_button {
+  display: none;
+  align-content: center;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  align-self: center;
+  background-color: aqua;
+  width: 40%;
+  height: 50px;
 }
 .main_task {
   width: 100%;
@@ -50,9 +92,30 @@
   background-color: pink;
 }
 
-#mai {
-  font-size: 40px;
-  font-style: italic;
-  text-align: center;
-  align-content: center;
+.day1 {
+  display: none;
+}
+
+.day2 {
+  display: none;
+}
+
+.day3 {
+  display: none;
+}
+
+#next2 {
+  display: none;
+}
+
+#next3 {
+  display: none;
+}
+
+#button1 {
+  display: none;
+}
+
+#button2 {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
