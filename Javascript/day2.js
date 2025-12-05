@@ -220,6 +220,8 @@ function getAnswer1() {
             n++
         break;
         case 9:
+            console.log("order is "+order2);
+            order2++
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
@@ -232,7 +234,9 @@ function getAnswer1() {
             }else{
                 document.getElementById("q").innerHTML = "Im gonna be your friend";
             }
-            order2++
+  
+            console.log(order2);
+            
             n++
         break;
         case 14:
@@ -376,6 +380,7 @@ function getAnswer2() {
             n++
         break;
         case 9:
+            order2++
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';

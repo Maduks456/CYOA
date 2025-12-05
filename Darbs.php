@@ -11,6 +11,7 @@
 <script src="Javascript/nextday.js" defer></script>
 <script src="Javascript/day1.js" defer></script>
 <script src="Javascript/day2.js" defer></script>
+<script src="Javascript/day3.js" defer></script>
     <div class="main">
         <div class="main_front">
           <div class="main_front_Endings" id="end">
@@ -41,6 +42,12 @@
                     <button onclick="Next3()" id="next3">
                         Next3
                     </button>
+                    <button onclick="Next4()" id="next4">
+                        Next4
+                    </button>
+                    <button onclick="Next5()" id="next5">
+                        Next5
+                    </button>
                 </div>
             </div>
             <div class="main_task_answers">
@@ -57,7 +64,7 @@
                         </button> 
                         <button class="day2" onclick=" getAnswer2()" id="ans22">
                         </button>
-                        <button class="day3" onclick=" getanswer3()" id="ans23">
+                        <button class="day3" onclick=" getanswer2()" id="ans23">
                         </button>                                
                 </div>
             </div>

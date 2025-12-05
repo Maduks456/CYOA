@@ -1,4 +1,6 @@
-function ToDay2(){
+
+    localStorage.clear();
+    function ToDay2(){
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next2").style.display = 'block';
     document.getElementById("days").style.display = 'none';
