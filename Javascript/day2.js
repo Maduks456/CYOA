@@ -1,5 +1,4 @@
-// player depresion stat
-let depresion = 0;
+
 //questions/answers and variable for it
 const questions2 =[ 
     "Whats 2x160x678?",
@@ -44,7 +43,9 @@ const answerday2box3 = [
 
     qu2=0;
 // later its for making a friend
-    let guess = Math.floor(Math.random() * 2) + 1;
+    let guess = Math.floor(Math.random() * 2)+1 ;
+    console.log("guess is "+guess);
+    
 //narrator text and array variable
 const narrator2 = [ 
     "When you entered the school you met your first friend and talked till the math lesson started", 
@@ -149,6 +150,7 @@ function Next2() {
             qu2++
         break;
         case 23:
+
             document.getElementById("days").style.display = 'block';
             document.getElementById("maintext").style.display = 'block';
             document.getElementById("button2").style.display = 'block';
@@ -227,10 +229,8 @@ function getAnswer1() {
             document.getElementById("ans32").style.display = 'none';
             if (localStorage.getItem(questions[0])== "Anime" ){
                 document.getElementById("q").innerHTML = "Im not gonna be your friend anime weeb";
-                depresion=depresion+1;
             }else if(guess == 1) {
                 document.getElementById("q").innerHTML = "Im not gonna be your friend";
-                depresion=depresion+1
             }else{
                 document.getElementById("q").innerHTML = "Im gonna be your friend";
             }
@@ -250,7 +250,6 @@ function getAnswer1() {
             }else{
                 n++
                 document.getElementById("q").innerHTML = narrator2[n];
-                depresion=depresion+1;
             }
             n++
         break;
@@ -318,7 +317,7 @@ function getAnswer1() {
             if (localStorage.getItem(questions[3])=="School dorms"){
                 document.getElementById("q").innerHTML = "you went to the dorms";
             }else{
-                document.getElementById("q").innerHTML = "You went to your perents home";
+                document.getElementById("q").innerHTML = "You went to your perents house";
             }
         break;
     }
@@ -386,10 +385,8 @@ function getAnswer2() {
             document.getElementById("ans32").style.display = 'none';
             if (localStorage.getItem(questions[0])== "Anime" ){
                 document.getElementById("q").innerHTML = "Im not gonna be your friend anime weeb";
-                depresion=depresion+1;
             }else if(guess == 1) {
                 document.getElementById("q").innerHTML = "Im not gonna be your friend";
-                depresion=depresion+1
             }else{
                 document.getElementById("q").innerHTML = "Im gonna be your friend";
             }
@@ -406,7 +403,6 @@ function getAnswer2() {
             }else{
                 n++
                 document.getElementById("q").innerHTML = narrator2[n];
-                depresion=depresion+1;
             }
             n++
         break;
@@ -541,10 +537,8 @@ function getAnswer3() {
             document.getElementById("ans32").style.display = 'none';
             if (localStorage.getItem(questions[0])== "Anime" ){
                 document.getElementById("q").innerHTML = "Im not gonna be your friend anime weeb";
-                depresion=depresion+1;
             }else if(guess == 1) {
                 document.getElementById("q").innerHTML = "Im not gonna be your friend";
-                depresion=depresion+1
             }else{
                 document.getElementById("q").innerHTML = "Im gonna be your friend";
             }
@@ -561,7 +555,6 @@ function getAnswer3() {
             }else{
                 n++
                 document.getElementById("q").innerHTML = narrator2[n];
-                depresion=depresion+1;
             }
             console.log("n is: "+n);
             n++

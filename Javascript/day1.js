@@ -1,9 +1,39 @@
       // questions that the player will answer
-      const questions = ["What do you like?", "what do you do in your free time?", "Say 1 intesting fact about yourself.", "Where did I live?", "Should you tell about your day to your mom or dad?"];
-      const Answerbox1 = ["Running","play games", "I know 4 diffrent languages","Perents house","Dad"];
-      const Answerbox2 = ["Anime", "Spend time with friends", "I have traveled to 2 diffrent countrys", "School dorms", "Mom"];
-      const Answerbox3 = ["Animals especially cats", "Spend time coding", "I have learnd to drive a car", "", ""];
-      const Answerbox4 = ["Gambling", "sleep", "", "",""];
+      const questions = [
+        "What do you like?",
+        "what do you do in your free time?",
+        "Say 1 intesting fact about yourself.",
+        "Where did I live?",
+        "Should you tell about your day to your mom or dad?"
+        ];
+      const Answerbox1 = [
+        "Running",
+        "play games",
+        "I know 4 diffrent languages",
+        "Perents house",
+        "Dad"
+        ];
+      const Answerbox2 = [
+        "Anime",
+        "Spend time with friends",
+        "I have traveled to 2 diffrent countrys", 
+        "School dorms",
+        "Mom"
+        ];
+      const Answerbox3 = [
+        "Animals especially cats",
+        "Spend time coding",
+        "I have learnd to drive a car",
+        "",
+        ""
+        ];
+      const Answerbox4 = [
+        "Gambling",
+        "sleep",
+        "",
+        "",
+        ""
+        ];
       // cool running,gambeling, spend time coding 
       // outcast anime, sleep
       //nutral Animals especially cats, spend time with friends, play games
@@ -20,11 +50,15 @@
                     "After the class you were going out of the school when a diffrent classmate came up to you",
                     "You went ouside and thought...",
                     "you went back to your ",
-                    "Entering your room in the doorms you met you roommate, talked the whole evening and  went to sleep.",
+                    "Entering your room in the dorms you met you roommate, talked the whole evening and  went to sleep.",
                     "You told your   about your day and after went to bed."
                     ]
       // Students 1 text and answers
-      const Student1 = ["Hey you like  do you want to be friends?", "Cool atlest i will have someone to talk to.", "Oh okey."]
+      const Student1 = [
+        "Hey you like  do you want to be friends?",
+         "Cool atlest i will have someone to talk to.",
+         "Oh okey."
+        ]
       const StuAnswerbox1 = ["Sure"]
       const StuAnswerbox2 = ["No sorry"]
 // order of the  text/ questions

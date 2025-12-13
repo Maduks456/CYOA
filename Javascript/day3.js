@@ -1,4 +1,5 @@
-let Depresion = depresion;
+
+
 let order3 = 1;
 const questions3 = [
     "Do you want to skip school?", 
@@ -95,7 +96,7 @@ function Next3() {
             document.getElementById("button3").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';
-            document.getElementById("next2").style.display = 'none';
+            document.getElementById("next3").style.display = 'none';
             document.getElementById("button2").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "day 3";
@@ -121,10 +122,10 @@ function Next3() {
             n3++
         break;
         case 15:
-            document.getElementById("q").innerHTML = questions3[qu3]
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
+            document.getElementById("q").innerHTML = questions3[qu3]
                 if(Answerday3box1[qu3] != ""){
                     document.getElementById("ans13").style.display = 'block';
                     document.getElementById("ans13").innerHTML = Answerday3box1[qu3];
@@ -133,7 +134,7 @@ function Next3() {
                     document.getElementById("ans23").style.display = 'block';
                     document.getElementById("ans23").innerHTML = Answerday3box2[qu3];
                 }
-                if(localStorage.getItem(St1question)==StuAnswerbox1[0]|| localStorage.getItem(St2question)==StuAnswerbox1[0]|| localStorage.getItem(questions2[3])== "Use your phone"|| localStorage.getItem(questions2[1])== "Try to make a new friend"&& guess==0){
+                if(Answerday3box3[qu3] != ""){
                     document.getElementById("ans33").style.display = 'block';
                     document.getElementById("ans33").innerHTML = Answerday3box3[qu3];
                 }
@@ -155,7 +156,7 @@ function Next3() {
             document.getElementById("button3").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';
-            document.getElementById("next2").style.display = 'none';
+            document.getElementById("next3").style.display = 'none';
             document.getElementById("button2").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "day 3";
@@ -220,7 +221,6 @@ function getanswer1() {
                 document.getElementById("q").innerHTML = "The teacher doesnt fully trust you" 
             }else{
                 document.getElementById("q").innerHTML = "The teacher is angry at you"
-                Depresion=Depresion+1
             }
         break;
         case 11:
@@ -324,7 +324,6 @@ function getanswer2() {
                 document.getElementById("q").innerHTML = "The teacher doesnt fully trust you" 
             }else{
                 document.getElementById("q").innerHTML = "The teacher is angry at you"
-                Depresion=Depresion+1
             }
         break;
         case 11:
@@ -428,7 +427,6 @@ function getanswer3() {
                 document.getElementById("q").innerHTML = "The teacher doesnt fully trust you" 
             }else{
                 document.getElementById("q").innerHTML = "The teacher is angry at you"
-                Depresion=Depresion+1
             }
         break;
         case 11:
