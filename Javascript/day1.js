@@ -49,7 +49,7 @@
                     "After you spoke a classmate  came up to you and asked.",
                     "After the class you were going out of the school when a diffrent classmate came up to you",
                     "You went ouside and thought...",
-                    "you went back to your ",
+                    "You went back to your ",
                     "Entering your room in the dorms you met you roommate, talked the whole evening and  went to sleep.",
                     "You told your   about your day and after went to bed."
                     ]
@@ -181,95 +181,96 @@ function FrText(){
             document.getElementById("next").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "Day 1";
-            if (localStorage.getItem(St1question)=="Sure" && localStorage.getItem(St2question)=="Sure"){
-                if (localStorage.getItem(questions[3])=="Dad") {
-                    if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                        document.getElementById("maintext").innerHTML = "Today you got 2 new friends, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. When you got home you told your dad about your day.";
-                    }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                        document.getElementById("maintext").innerHTML = "Today you got 2 new friends, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. When you got home you told your dad about your day."; 
-                    } else {
-                        document.getElementById("maintext").innerHTML = "Today you got 2 new friends, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. When you got home you told your dad about your day.";
-                    }    
-                }else{
-                    if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                        document.getElementById("maintext").innerHTML = "Today you got 2 new friends, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. When you got home you told your mom about your day.";
-                    }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                        document.getElementById("maintext").innerHTML = "Today you got 2 new friends, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. When you got home you told your mom about your day."; 
-                    } else {
-                        document.getElementById("maintext").innerHTML = "Today you got 2 new friends, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. When you got home you told your mom about your day.";
-                    } 
+                document.getElementById("maintext").innerHTML = "You live in the school dorms, "
+                //Friends
+                if (localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]) {
+                    document.getElementById("maintext").innerHTML += "today you made 2 friends, " 
+                }else if(localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]){
+                    document.getElementById("maintext").innerHTML += "today you made 1 friend, "
                 }
-            }else if (localStorage.getItem(St1question)=="Sure" || localStorage.getItem(St2question)=="Sure") {
-                if (localStorage.getItem(questions[3])=="Dad") {
-                    if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                        document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. When you got home you told your dad about your day.";
-                    }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                        document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. When you got home you told your dad about your day."; 
-                    } else {
-                        document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. When you got home you told your dad about your day.";
-                    }    
-                }else{
-                    if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                        document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. When you got home you told your mom about your day.";
-                    }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                        document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. When you got home you told your mom about your day."; 
-                    } else {
-                        document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. When you got home you told your mom about your day.";
-                    } 
+                //checks what you like
+                if (localStorage.getItem(questions[0])==Answerbox1[0]) {
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox1[0].toLowerCase()+", " 
+                }else if(localStorage.getItem(questions[0])==Answerbox2[0]){
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox2[0].toLowerCase()+", " 
+                }else if (localStorage.getItem(questions[0])==Answerbox3[0]) {
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox3[0].toLowerCase()+", " 
+                }else {
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like"+Answerbox4[0].toLowerCase()+", " 
                 }
-            } else {
-                if (localStorage.getItem(questions[3])=="Dad") {
-                    if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                        document.getElementById("maintext").innerHTML = "Today  you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. When you got home you told your dad about your day.";
-                    }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                        document.getElementById("maintext").innerHTML = "Today you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. When you got home you told your dad about your day."; 
-                    } else {
-                        document.getElementById("maintext").innerHTML = "Today you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. When you got home you told your dad about your day.";
-                    }    
-                }else{
-                    if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                        document.getElementById("maintext").innerHTML = "Today you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. When you got home you told your mom about your day.";
-                    }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                        document.getElementById("maintext").innerHTML = "Today you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. When you got home you told your mom about your day."; 
-                    } else {
-                        document.getElementById("maintext").innerHTML = "Today you live with your perents, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. When you got home you told your mom about your day.";
-                    } 
+                //checks what you do in yor free time
+                if (localStorage.getItem(questions[1])==Answerbox1[1]) {
+                    document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox1[1].toLowerCase()+" and " 
+                }else if(localStorage.getItem(questions[1])==Answerbox2[1]){
+                    document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox2[1].toLowerCase()+" and " 
+                }else if (localStorage.getItem(questions[1])==Answerbox3[1]) {
+                    document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox3[1].toLowerCase()+" and " 
+                }else {
+                    document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox4[1].toLowerCase()+" and " 
                 }
-            }
+                // checks your intresting fact
+                if (localStorage.getItem(questions[2])==Answerbox1[2]) {
+                    document.getElementById("maintext").innerHTML += "that you know 4 diffrent languages." 
+                }else if(localStorage.getItem(questions[2])==Answerbox2[2]){
+                    document.getElementById("maintext").innerHTML += "that you have traveled to 2 diffrent countrys."
+                }else{
+                    document.getElementById("maintext").innerHTML += "that you have learnd to drive a car."
+                }
         case 21:
             document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block';
+            document.getElementById("maintext").style.display = 'block'; 
             document.getElementById("button1").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';
             document.getElementById("next").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "Day 1";
-              if (localStorage.getItem(St1question)=="Sure"&&localStorage.getItem(St2question)=="Sure"){
-                if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                    document.getElementById("maintext").innerHTML = "Today you got 2 new friends, you live in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. ";
-                }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                    document.getElementById("maintext").innerHTML = "Today you got 2 new friends, live in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. "; 
-                } else {
-                    document.getElementById("maintext").innerHTML = "Today you got 2 new friends, live in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. ";
-                }    
-            }else if (localStorage.getItem(St1question)=="Sure" || localStorage.getItem(St2question)=="Sure") {
-                if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                    document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you llive in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. ";
-                }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                    document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you live in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. "; 
-                } else {
-                    document.getElementById("maintext").innerHTML = "Today you got 1 new friend, you live in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. ";
-                }    
-            } else {
-                if(localStorage.getItem(questions[2])=="I know 4 diffrent languages"){
-                    document.getElementById("maintext").innerHTML = "Today  you live in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you know 4 languages. ";
-                }else if (localStorage.getItem(questions[2])=="I have traveled to 2 diffrent countrys") {
-                    document.getElementById("maintext").innerHTML = "Today you live in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have been to 2 diffrent contries. "; 
-                } else {
-                    document.getElementById("maintext").innerHTML = "Today you live in the dorms, everyone in you class knows you like "+localStorage.getItem(questions[0]).toLowerCase()+", in your free time you "+localStorage.getItem(questions[1]).toLowerCase()+"and you have learnd to drive a car. ";
-                }    
-            }
+                 if (localStorage.getItem(questions[3])=="Perents house") {
+                    document.getElementById("maintext").innerHTML = "You live with your perents, "
+                }else{
+                    document.getElementById("maintext").innerHTML = "You live in the school dorms, "
+                }
+                if (localStorage.getItem(questions[3])=="Perents house") {
+                    if (localStorage.getItem(questions[4])=="Dad") {
+                        document.getElementById("maintext").innerHTML += "you told your dad about your first day, " 
+                    }else{
+                        document.getElementById("maintext").innerHTML += "you told your mom about your first day, " 
+                    }
+                }
+                //Friends
+                if (localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]) {
+                    document.getElementById("maintext").innerHTML += "you made 2 friends, " 
+                }else if(localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]){
+                    document.getElementById("maintext").innerHTML += "you made 1 friend,"
+                }
+                //checks what you like
+                if (localStorage.getItem(questions[0])==Answerbox1[0]) {
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox1[0].toLowerCase()+", " 
+                }else if(localStorage.getItem(questions[0])==Answerbox2[0]){
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox2[0].toLowerCase()+", " 
+                }else if (localStorage.getItem(questions[0])==Answerbox3[0]) {
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox3[0].toLowerCase()+", " 
+                }else {
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like"+Answerbox4[0].toLowerCase()+", " 
+                }
+                //checks what you d in yor free time
+                if (localStorage.getItem(questions[1])==Answerbox1[1]) {
+                    document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox1[1].toLowerCase()+" and " 
+                }else if(localStorage.getItem(questions[1])==Answerbox2[1]){
+                    document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox2[1].toLowerCase()+" and " 
+                }else if (localStorage.getItem(questions[1])==Answerbox3[1]) {
+                    document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox3[1].toLowerCase()+" and " 
+                }else {
+                    document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox4[1].toLowerCase()+" and " 
+                }
+                // checks your intresting fact
+                if (localStorage.getItem(questions[2])==Answerbox1[2]) {
+                    document.getElementById("maintext").innerHTML += "that you know 4 diffrent languages." 
+                }else if(localStorage.getItem(questions[2])==Answerbox2[2]){
+                    document.getElementById("maintext").innerHTML += "that you have traveled to 2 diffrent countrys."
+                }else{
+                    document.getElementById("maintext").innerHTML += "that you have learnd to drive a car."
+                }
         break;
     }
     order++

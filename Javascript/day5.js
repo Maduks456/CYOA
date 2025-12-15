@@ -152,7 +152,45 @@ function Next5(){
             document.getElementById("button4").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "day 5";
-            document.getElementById("maintext").innerHTML = "day 5 done?"
+            if (localStorage.getItem(questions5[0])== Answerday5box1[0]) {
+                document.getElementById("maintext").innerHTML = "Today you slept well, " 
+            }else{
+                document.getElementById("maintext").innerHTML = "Today you didnt sleep well, " 
+            }
+            if (localStorage.getItem(questions5[1])== Answerday5box3[1]) {
+                document.getElementById("maintext").innerHTML += "you were to sleepy so you slept trough the first lesson, " 
+            }
+            if (localStorage.getItem(questions5[1])!= Answerday5box3[1]) {
+                if (localStorage.getItem(questions5[2])== Answerday5box1[2]) {
+                    document.getElementById("maintext").innerHTML += "you did the work for the first lesson, " 
+                }else{
+                    document.getElementById("maintext").innerHTML += "you didnt the work for the first lesson, " 
+                }
+            }
+            if (localStorage.getItem(questions[3])==Answerbox1[3]) {
+                if (localStorage.getItem(questions5[4])== Answerday5box1[4]) {
+                    document.getElementById("maintext").innerHTML += "in PE you played basketball." 
+                }else if (localStorage.getItem(questions5[4])== Answerday5box2[4]) {
+                    document.getElementById("maintext").innerHTML += "in PE you played football." 
+                }else{
+                    document.getElementById("maintext").innerHTML += "in PE you played volleyball." 
+                }
+            }else{
+                if (localStorage.getItem(questions5[4])== Answerday5box1[4]) {
+                    document.getElementById("maintext").innerHTML += "in PE you played basketball and " 
+                }else if (localStorage.getItem(questions5[4])== Answerday5box2[4]) {
+                    document.getElementById("maintext").innerHTML += "in PE you played football and " 
+                }else{
+                    document.getElementById("maintext").innerHTML += "in PE you played volleyball and " 
+                }
+            }
+            if (localStorage.getItem(questions[3])==Answerbox2[3]) {
+                if (localStorage.getItem(questions5[5])== Answerday5box1[5]) {
+                    document.getElementById("maintext").innerHTML += "you went back home for the weekend." 
+                }else{
+                    document.getElementById("maintext").innerHTML += "you stayed at the dorms." 
+                }
+            }
         break;
     }
     console.log("before is "+order5);

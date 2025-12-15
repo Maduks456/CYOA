@@ -160,7 +160,24 @@ function Next2() {
             document.getElementById("button1").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "day 2";
-            document.getElementById("maintext").innerHTML = "You today 2nd";
+            // mmath answer
+              if (localStorage.getItem(questions2[0])==answerday2box1[0]){
+            document.getElementById("maintext").innerHTML = "Today you in math answered the question with a joke and half of the class knows your funny, " 
+            }else if (localStorage.getItem(questions2[0])==answerday2box2[0]){
+            document.getElementById("maintext").innerHTML = "Today you in math answered the question and half of the class hates you, " 
+            }else if (localStorage.getItem(questions2[0])==answerday2box3[0]){
+            document.getElementById("maintext").innerHTML = "Today you in math didnt answered the question and a third of the class was laughing at you, " 
+            }
+            if (localStorage.getItem(questions2[1])==answerday2box3[1]&&guess==2&&localStorage.getItem(questions2[3])==answerday2box1[3]) {
+                document.getElementById("maintext").innerHTML += "you made 2 friends, " 
+            }else if(localStorage.getItem(questions2[1])==answerday2box3[1]&&guess==2||localStorage.getItem(questions2[3])==answerday2box1[3]){
+                document.getElementById("maintext").innerHTML += "you made 1 friend, "
+            }
+            if (localStorage.getItem(questions2[5])=="No"){
+                document.getElementById("maintext").innerHTML += "you didnt listen to the safty rules, " 
+            }else{
+                document.getElementById("maintext").innerHTML += "you listened to the safty rules, " 
+            }
         break;
     }
     order2++

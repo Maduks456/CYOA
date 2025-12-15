@@ -165,10 +165,35 @@ function Next4(){
             document.getElementById("button3").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "day 4";
-            document.getElementById("maintext").innerHTML = "day 4 done?"
-        break;
-    }
+                if (localStorage.getItem(questions4[0])== Answerday4box1[0]) {
+                    document.getElementById("maintext").innerHTML = "Today You waited alone till the lesson, " 
+                }else{
+                    document.getElementById("maintext").innerHTML = "Today you spent time with your friend before class, "
+                }
+                if (localStorage.getItem(questions4[1])== Answerday4box1[1]) {
+                    document.getElementById("maintext").innerHTML += "you know alot of programming, " 
+                }else if (localStorage.getItem(questions4[1])== Answerday4box2[1]){
+                    document.getElementById("maintext").innerHTML += "you know not alot of programming, "
+                }else{
+                    document.getElementById("maintext").innerHTML += "you know nothing about programming, "
+                }
+                if (localStorage.getItem(questions4[2])== Answerday4box1[2]) {
+                    document.getElementById("maintext").innerHTML += "you started to learn programming bcause it looked intresting, " 
+                }else if (localStorage.getItem(questions4[2])== Answerday4box2[2]){
+                    document.getElementById("maintext").innerHTML += "you started to learn programming bcause i like programming, "
+                }else{
+                    document.getElementById("maintext").innerHTML += "you started to learn programming bcause it was the only option, "
+                }
+                
+                if (localStorage.getItem(questions4[3])== Answerday4box1[3]) {
+                    if(localStorage.getItem(questions4[1])==Answerday4box1[1]){
+                        document.getElementById("maintext").innerHTML += "you did the project before the teacher explaned how to do it "
+                    }
+                }else{
+                    document.getElementById("maintext").innerHTML += "you tryed to do it but couldnt do it"
+                }
     order4++
+}
 }
 function Getanswer1() {
     key4= document.getElementById("q").innerHTML;

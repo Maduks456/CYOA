@@ -50,7 +50,7 @@ const narrator3 = [
     "You waited till Biology and went in",
     "The teacher wanted to get to know everyone in the class",
     "You did nothing else just sat on your phone",
-    "I became a teacher because i liked children  and you are the future of us",
+    "I became a teacher because i liked children and you are the future of us",
     "When I have free time I like gardening"
 
 ]
@@ -100,7 +100,19 @@ function Next3() {
             document.getElementById("button2").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "day 3";
-            document.getElementById("maintext").innerHTML = "You skiped school and "+localStorage.getItem(questions3[1])+" and "+localStorage.getItem(questions3[2]);
+            document.getElementById("maintext").innerHTML = "Today you skiped school, "
+            if (localStorage.getItem(questions3[1])==Answerday3box1[1]){
+                document.getElementById("maintext").innerHTML += "you explored the city, "
+            }else  if (localStorage.getItem(questions3[1])==Answerday3box2[1]){
+                document.getElementById("maintext").innerHTML += "you went to a concert, "
+            }else{
+                document.getElementById("maintext").innerHTML += "you visited the movies, "
+            }
+            if(localStorage.getItem(questions3[2])=="Lie"){
+                document.getElementById("maintext").innerHTML += "you lied to you teacher why you werent at school."
+            }else{
+                document.getElementById("maintext").innerHTML += "you told the truth to you teacher why you werent at school."
+            }
         break;
         case 8: case 9: case 13: case 14:
             document.getElementById("q").innerHTML = narrator3[n3]
@@ -160,7 +172,18 @@ function Next3() {
             document.getElementById("button2").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "day 3";
-            document.getElementById("maintext").innerHTML = "day 3 done?"
+            if (localStorage.getItem(questions3[3])==Answerday3box1[3]){
+                document.getElementById("maintext").innerHTML = "Today you thought you could do the group project all alone but the teacher didnt alow it, "
+            }else  if (localStorage.getItem(questions3[3])==Answerday3box2[3]){
+                document.getElementById("maintext").innerHTML = "'Today you tryed to work with random classmates but were terrible, "
+            }else{
+                document.getElementById("maintext").innerHTML += "Today you worked with your fiends and you did it, "
+            }
+            if (localStorage.getItem(questions3[4])==Answerday3box1[4]){
+                document.getElementById("maintext").innerHTML = "you sat in biology on your phone."
+            }else{
+                document.getElementById("maintext").innerHTML = "you asked you biology teacher questions."
+            }
         break;
     }
     console.log("before "+order3); 

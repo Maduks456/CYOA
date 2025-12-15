@@ -48,6 +48,34 @@ function OverView() {
             document.getElementById("maintext").innerHTML += "you told your mom about your first day, " 
         }
     }
+    //cheks what you like
+    if (localStorage.getItem(questions[0])==Answerbox1[0]) {
+        document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox1[0].toLowerCase()+", " 
+    }else if(localStorage.getItem(questions[0])==Answerbox2[0]){
+        document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox2[0].toLowerCase()+", " 
+    }else if (localStorage.getItem(questions[0])==Answerbox3[0]) {
+        document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox3[0].toLowerCase()+", " 
+    }else {
+        document.getElementById("maintext").innerHTML += "everyone in you class knows that you like"+Answerbox4[0].toLowerCase()+", " 
+    }
+    //checks what you do in yor free time
+    if (localStorage.getItem(questions[1])==Answerbox1[1]) {
+        document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox1[1].toLowerCase()+" and " 
+    }else if(localStorage.getItem(questions[1])==Answerbox2[1]){
+        document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox2[1].toLowerCase()+" and " 
+    }else if (localStorage.getItem(questions[1])==Answerbox3[1]) {
+        document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox3[1].toLowerCase()+" and " 
+    }else {
+        document.getElementById("maintext").innerHTML += "in your free time you "+Answerbox4[1].toLowerCase()+" and " 
+    }
+    // checks your intresting fact
+    if (localStorage.getItem(questions[2])==Answerbox1[2]) {
+        document.getElementById("maintext").innerHTML += "that you know 4 diffrent languages." 
+    }else if(localStorage.getItem(questions[2])==Answerbox2[2]){
+        document.getElementById("maintext").innerHTML += "that you have traveled to 2 diffrent countrys."
+    }else{
+        document.getElementById("maintext").innerHTML += "that you have learnd to drive a car."
+    }
     //cheks how many friends you have
     if (localStorage.getItem(St1question)=="Sure" && localStorage.getItem(St2question)=="Sure" && localStorage.getItem(questions2[1])=="Try to make a new friend" && guess==2 && localStorage.getItem(questions2[3])=="Use your phone" ) {
         document.getElementById("maintext").innerHTML += "you made 4 friends at school, " 
@@ -82,7 +110,7 @@ function OverView() {
     }
     //checks if you listened to the safty rules/ if you got burnt in physics
     if (localStorage.getItem(questions2[5])=="No"){
-            document.getElementById("maintext").innerHTML += "you scorched your hand in physics," 
+            document.getElementById("maintext").innerHTML += "you scorched your hand in physics, " 
     }
      if (localStorage.getItem(questions[3])=="School dorms") {
         if (localStorage.getItem(questions5[5])=="Go home"){
