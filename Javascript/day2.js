@@ -3,7 +3,7 @@
 const questions2 =[ 
     "Whats 2x160x678?",
     "Its breakfast break what will you do?",
-    "You saw 2 diffrent claassmates a tall one and  a emo one. Which do you want to try to friend?",
+    "You saw 2 diffrent claassmates a tall one and a emo one. Which do you want to try to friend?",
     "What should you do?",
     "For the lunch break what should you do?",
     "should you listen to the safty rules?",
@@ -152,7 +152,7 @@ function Next2() {
         case 23:
 
             document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block';
+            document.getElementById("maintext").style.display = 'flex';
             document.getElementById("button2").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';

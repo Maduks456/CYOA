@@ -36,66 +36,67 @@
             <div class="main_task_text" >
                 <div class="main_task_text-maintext" id="q">Its the first day of school and you dont know where to go.</div>
                 <div class="main_task_text-mainbutton">
-                    <button onclick="FrText()" id="next">
+                    <button onclick="FrText()" id="next" class="main_task_text-mainbutton_allnext Allbutton">
                         Next
                     </button>
-                    <button onclick="Next2()" id="next2">
+                    <button onclick="Next2()" id="next2" class="main_task_text-mainbutton_allnext Allbutton">
                         Next2
                     </button>
-                    <button onclick="Next3()" id="next3">
+                    <button onclick="Next3()" id="next3" class="main_task_text-mainbutton_allnext Allbutton">
                         Next3
                     </button>
-                    <button onclick="Next4()" id="next4">
+                    <button onclick="Next4()" id="next4" class="main_task_text-mainbutton_allnext Allbutton">
                         Next4
                     </button>
-                    <button onclick="Next5()" id="next5">
+                    <button onclick="Next5()" id="next5" class="main_task_text-mainbutton_allnext Allbutton">
                         Next5
                     </button>
                 </div>
             </div>
+            <div class="main_task_acents"></div>
             <div class="main_task_answers">
                 <div class="main_task_answers_answer">
-                        <button class="day1" onclick=" GetAnswer1()" id="ans1">
+                        <button class="day1 main_task_answers_answer_alldays Allbutton" onclick=" GetAnswer1()" id="ans1">
                         </button>
-                        <button class="day2" onclick=" getAnswer1()" id="ans12">
+                        <button class="day2 main_task_answers_answer_alldays Allbutton" onclick=" getAnswer1()" id="ans12">
                         </button>
-                        <button class="day3" onclick=" getanswer1()" id="ans13">
+                        <button class="day3 main_task_answers_answer_alldays Allbutton" onclick=" getanswer1()" id="ans13">
                         </button>       
-                        <button class="day4" onclick=" Getanswer1()" id="ans14">
+                        <button class="day4 main_task_answers_answer_alldays Allbutton" onclick=" Getanswer1()" id="ans14">
                         </button>
-                        <button class="day5" onclick=" get_answer1()" id="ans15">
+                        <button class="day5 main_task_answers_answer_alldays Allbutton" onclick=" get_answer1()" id="ans15">
                         </button>                                                                    
                 </div>
                 <div class="main_task_answers_answer">
-                        <button class="day1" onclick=" GetAnswer2()" id="ans2">
+                        <button class="day1 main_task_answers_answer_alldays Allbutton " onclick=" GetAnswer2()" id="ans2">
                         </button> 
-                        <button class="day2" onclick=" getAnswer2()" id="ans22">
+                        <button class="day2 main_task_answers_answer_alldays Allbutton" onclick=" getAnswer2()" id="ans22">
                         </button>
-                        <button class="day3" onclick=" getanswer2()" id="ans23">
+                        <button class="day3 main_task_answers_answer_alldays Allbutton" onclick=" getanswer2()" id="ans23">
                         </button>                                
-                        <button class="day4" onclick=" Getanswer2()" id="ans24">
+                        <button class="day4 main_task_answers_answer_alldays Allbutton" onclick=" Getanswer2()" id="ans24">
                         </button>  
-                        <button class="day5" onclick=" get_answer2()" id="ans25">
+                        <button class="day5 main_task_answers_answer_alldays Allbutton" onclick=" get_answer2()" id="ans25">
                         </button>                                      
                 </div>
             </div>
             <div class="main_task_answers">
                 <div class="main_task_answers_answer">
-                        <button class="day1" onclick=" GetAnswer3()" id="ans3">
+                        <button class="day1 main_task_answers_answer_alldays Allbutton" onclick=" GetAnswer3()" id="ans3">
                         </button>                 
-                        <button class="day2" onclick=" getAnswer3()" id="ans32">
+                        <button class="day2 main_task_answers_answer_alldays Allbutton" onclick=" getAnswer3()" id="ans32">
                         </button>
-                        <button class="day3" onclick=" getanswer3()" id="ans33">
+                        <button class="day3 main_task_answers_answer_alldays Allbutton" onclick=" getanswer3()" id="ans33">
                         </button>                
-                        <button class="day4" onclick=" Getanswer3()" id="ans34">
+                        <button class="day4 main_task_answers_answer_alldays Allbutton" onclick=" Getanswer3()" id="ans34">
                         </button>
-                        <button class="day5" onclick=" get_answer3()" id="ans35">
+                        <button class="day5 main_task_answers_answer_alldays Allbutton" onclick=" get_answer3()" id="ans35">
                         </button>                               
                 </div>
                 <div class="main_task_answers_answer">
-                        <button class="day1" onclick=" GetAnswer4()" id="ans4">
+                        <button class="day1 main_task_answers_answer_alldays Allbutton" onclick=" GetAnswer4()" id="ans4">
                         </button>                          
-                        <button class="day4" onclick=" Getanswer4()" id="ans44">
+                        <button class="day4 main_task_answers_answer_alldays Allbutton" onclick=" Getanswer4()" id="ans44">
                         </button>                               
                 </div>
             </div>

@@ -92,7 +92,7 @@ function Next3() {
         case 7:
             //end of the day for skiping school
             document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block';
+            document.getElementById("maintext").style.display = 'flex';
             document.getElementById("button3").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';
@@ -164,7 +164,7 @@ function Next3() {
         break;
         case 20:
             document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block';
+            document.getElementById("maintext").style.display = 'flex';
             document.getElementById("button3").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';

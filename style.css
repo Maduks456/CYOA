@@ -1,3 +1,14 @@
+:root {
+  --mainPannal: #373030c0;
+  --Acents: linear-gradient(90deg,rgba(227, 92, 25, 1) 0%, rgba(250, 46, 0, 1) 50%, rgba(184, 0, 0, 1) 100%);
+  background-color: #424242;
+  --text: rgb(222, 222, 222);
+  color: var(--text);
+  --buttons: #312323c0;
+  --buttons_hover: #150c0cc0;
+  --buttons_border: #ff6200;
+}
+
 .main {
   width: 100vw;
   height: 100vh;
@@ -8,7 +19,6 @@
   display: flex;
   width: 100%;
   height: 75%;
-  background-color: blue;
   justify-content: center;
 }
 .main_front_Endings {
@@ -39,7 +49,8 @@
   background-color: aqua;
   width: 95%;
   height: 70%;
-  font-size: 30px;
+  font-size: 35px;
+  align-content: center;
 }
 .main_front_Endings_button {
   display: none;
@@ -54,42 +65,70 @@
 .main_task {
   width: 100%;
   height: 25%;
-  background-color: green;
+  background-color: var(--mainPannal);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .main_task_text {
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 50px;
-  background-color: red;
   margin-bottom: 5px;
   justify-content: space-evenly;
 }
 .main_task_text-maintext {
+  text-align: center;
   width: 75%;
   height: 100%;
-  background-color: pink;
+  align-content: center;
+  font-size: 25px;
 }
 .main_task_text-mainbutton {
   width: 5%;
   height: 100%;
-  background-color: gray;
+  align-content: center;
+  text-align: center;
+}
+.main_task_text-mainbutton_allnext {
+  background-color: var(--buttons);
+  color: var(--text);
+  border: var(--buttons);
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
 }
 .main_task_answers {
   width: 100%;
   height: 30%;
-  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 .main_task_answers_answer {
+  display: flex;
   width: 45%;
   height: 100%;
-  background-color: pink;
+  align-content: center;
+  justify-content: center;
+}
+.main_task_answers_answer_alldays {
+  background-color: var(--buttons);
+  color: var(--text);
+  border: var(--buttons);
+  width: 50%;
+  height: 90%;
+  font-size: 20px;
+}
+.main_task_acents {
+  display: flex;
+  align-self: center;
+  width: 97%;
+  height: 5px;
+  background: var(--Acents);
 }
 
 .day1 {
@@ -146,4 +185,10 @@
 
 #button5 {
   display: none;
+}
+
+.Allbutton:hover {
+  background-color: var(--buttons_hover);
+  color: var(--text);
+  border: 1px solid var(--buttons_border);
 }/*# sourceMappingURL=style.css.map */
