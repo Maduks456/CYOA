@@ -185,7 +185,7 @@ function FrText(){
                 //Friends
                 if (localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]) {
                     document.getElementById("maintext").innerHTML += "today you made 2 friends, " 
-                }else if(localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]){
+                }else if(localStorage.getItem(St1question)==StuAnswerbox1[0]||localStorage.getItem(St2question)==StuAnswerbox1[0]){
                     document.getElementById("maintext").innerHTML += "today you made 1 friend, "
                 }
                 //checks what you like
@@ -196,7 +196,7 @@ function FrText(){
                 }else if (localStorage.getItem(questions[0])==Answerbox3[0]) {
                     document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox3[0].toLowerCase()+", " 
                 }else {
-                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like"+Answerbox4[0].toLowerCase()+", " 
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox4[0].toLowerCase()+", " 
                 }
                 //checks what you do in yor free time
                 if (localStorage.getItem(questions[1])==Answerbox1[1]) {
@@ -216,6 +216,7 @@ function FrText(){
                 }else{
                     document.getElementById("maintext").innerHTML += "that you have learnd to drive a car."
                 }
+        break;
         case 21:
             document.getElementById("days").style.display = 'block';
             document.getElementById("maintext").style.display = 'block'; 
@@ -227,8 +228,6 @@ function FrText(){
             document.getElementById("days"). innerHTML= "Day 1";
                  if (localStorage.getItem(questions[3])=="Perents house") {
                     document.getElementById("maintext").innerHTML = "You live with your perents, "
-                }else{
-                    document.getElementById("maintext").innerHTML = "You live in the school dorms, "
                 }
                 if (localStorage.getItem(questions[3])=="Perents house") {
                     if (localStorage.getItem(questions[4])=="Dad") {
@@ -240,8 +239,8 @@ function FrText(){
                 //Friends
                 if (localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]) {
                     document.getElementById("maintext").innerHTML += "you made 2 friends, " 
-                }else if(localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]){
-                    document.getElementById("maintext").innerHTML += "you made 1 friend,"
+                }else if(localStorage.getItem(St1question)==StuAnswerbox1[0]||localStorage.getItem(St2question)==StuAnswerbox1[0]){
+                    document.getElementById("maintext").innerHTML += "you made 1 friend, "
                 }
                 //checks what you like
                 if (localStorage.getItem(questions[0])==Answerbox1[0]) {
@@ -251,7 +250,7 @@ function FrText(){
                 }else if (localStorage.getItem(questions[0])==Answerbox3[0]) {
                     document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox3[0].toLowerCase()+", " 
                 }else {
-                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like"+Answerbox4[0].toLowerCase()+", " 
+                    document.getElementById("maintext").innerHTML += "everyone in you class knows that you like "+Answerbox4[0].toLowerCase()+", " 
                 }
                 //checks what you d in yor free time
                 if (localStorage.getItem(questions[1])==Answerbox1[1]) {

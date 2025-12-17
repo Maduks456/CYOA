@@ -1,12 +1,14 @@
 :root {
   --mainPannal: #373030c0;
   --Acents: linear-gradient(90deg,rgba(227, 92, 25, 1) 0%, rgba(250, 46, 0, 1) 50%, rgba(184, 0, 0, 1) 100%);
-  background-color: #424242;
   --text: rgb(222, 222, 222);
-  color: var(--text);
   --buttons: #312323c0;
   --buttons_hover: #150c0cc0;
   --buttons_border: #ff6200;
+  --font: 'Times New Roman', Times, serif;
+  color: var(--text);
+  font-family:var(--font);
+  background-color: #424242;
 }
 
 .main {
@@ -27,28 +29,26 @@
   flex-direction: column;
   width: 80%;
   height: 93%;
-  background-color: black;
+  background-color: var(--mainPannal);
   border-radius: 10px;
 }
 .main_front_Endings-days {
   display: none;
   align-content: center;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 5px;
   align-self: center;
-  background-color: aqua;
   width: 40%;
-  height: 50px;
+  height: 100px;
 }
 .main_front_Endings-maintext {
   display: none;
   padding: 5px;
   margin-top: 5px;
   align-self: center;
-  background-color: aqua;
   width: 95%;
-  height: 70%;
+  height: 60%;
   font-size: 35px;
   align-content: center;
 }
@@ -56,9 +56,8 @@
   display: none;
   align-content: center;
   justify-content: space-evenly;
-  margin-top: 5px;
+  margin-top: 15px;
   align-self: center;
-  background-color: aqua;
   width: 40%;
   height: 50px;
 }
@@ -100,6 +99,7 @@
   height: 40px;
   font-size: 20px;
   border-radius: 10px;
+  font-family: var(--font)
 }
 .main_task_answers {
   width: 100%;
@@ -119,9 +119,11 @@
   background-color: var(--buttons);
   color: var(--text);
   border: var(--buttons);
+  border-radius: 10px;
   width: 50%;
   height: 90%;
   font-size: 20px;
+  font-family: var(--font)
 }
 .main_task_acents {
   display: flex;
@@ -191,4 +193,15 @@
   background-color: var(--buttons_hover);
   color: var(--text);
   border: 1px solid var(--buttons_border);
+}
+
+.buttons {
+  background-color: var(--buttons);
+  color: var(--text);
+  border: var(--buttons);
+  font-size: 30px;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  font-family: var(--font)
 }/*# sourceMappingURL=style.css.map */

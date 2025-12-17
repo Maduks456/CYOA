@@ -144,7 +144,7 @@ function Next5(){
         break;
         case 14:
             document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'flex';
+            document.getElementById("maintext").style.display = 'block';
             document.getElementById("button5").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';

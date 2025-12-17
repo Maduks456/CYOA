@@ -157,7 +157,7 @@ function Next4(){
         break;
         case 18:
             document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'flex';
+            document.getElementById("maintext").style.display = 'block';
             document.getElementById("button4").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';

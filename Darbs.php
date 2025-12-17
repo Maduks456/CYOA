@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYOA test</title>
+    <title>A.W.O.S.</title>
     <link rel="stylesheet" href="style.css">
      
 </head>
@@ -20,14 +20,16 @@
           <div class="main_front_Endings" id="end">
             <div class="main_front_Endings-days " id="days">
             </div>
+            <div class="main_task_acents"></div>
             <div class="main_front_Endings-maintext" id="maintext"> 
             </div>
+            <div class="main_task_acents"></div>
             <div class="main_front_Endings_button" id="button">
-                <button id="button1" onclick="ToDay2()">Next Day2</button>
-                <button id="button2" onclick="ToDay3()">Next Day3</button>
-                <button id="button3" onclick="ToDay4()">Next Day4</button>
-                <button id="button4" onclick="ToDay5()">Next Day5</button>
-                <button id="button5" onclick="OverView()">OverView</button>
+                <button id="button1" class="buttons Allbutton" onclick="ToDay2()">Next Day</button>
+                <button id="button2" class="buttons Allbutton" onclick="ToDay3()">Next Day</button>
+                <button id="button3" class="buttons Allbutton" onclick="ToDay4()">Next Day</button>
+                <button id="button4" class="buttons Allbutton" onclick="ToDay5()">Next Day</button>
+                <button id="button5" class="buttons Allbutton" onclick="OverView()">OverView</button>
             </div>
         </div>
 
@@ -40,16 +42,16 @@
                         Next
                     </button>
                     <button onclick="Next2()" id="next2" class="main_task_text-mainbutton_allnext Allbutton">
-                        Next2
+                        Next
                     </button>
                     <button onclick="Next3()" id="next3" class="main_task_text-mainbutton_allnext Allbutton">
-                        Next3
+                        Next
                     </button>
                     <button onclick="Next4()" id="next4" class="main_task_text-mainbutton_allnext Allbutton">
-                        Next4
+                        Next
                     </button>
                     <button onclick="Next5()" id="next5" class="main_task_text-mainbutton_allnext Allbutton">
-                        Next5
+                        Next
                     </button>
                 </div>
             </div>
