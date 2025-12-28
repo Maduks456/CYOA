@@ -34,14 +34,11 @@
         "",
         ""
         ];
-      // cool running,gambeling, spend time coding 
-      // outcast anime, sleep
-      //nutral Animals especially cats, spend time with friends, play games
       // narrator/ plAyer text
       const text1 = [
                     "Its the first day of school and you dont know where to go.", 
                     "You go in to the school and try to find your classroom.",
-                    "You find yor classroom and sit down",
+                    "You find your classroom and sit down",
                     "Its the first day so everyone is talking about themselfs and its your turn", 
                     "The teacher asks you questions about you", 
                     "Oh thats intresting",
@@ -61,11 +58,8 @@
         ]
       const StuAnswerbox1 = ["Sure"]
       const StuAnswerbox2 = ["No sorry"]
-// order of the  text/ questions
-
+// order of the  text/questions
 let order =1;
-console.log(order);
-
 // Text array number
 let text = 1;
 //Question array number
@@ -77,7 +71,6 @@ let change = 1;
 let textStart;
 let textEnd;
 let word;
-
 let St1question;
 let St2question;
 let Narratortext1;
@@ -179,6 +172,7 @@ function FrText(){
             document.getElementById("button").style.display = 'flex';
             document.getElementById("end").style.display = 'flex';
             document.getElementById("next").style.display = 'none';
+            document.getElementById("background").style.display = 'none';
             document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "Day 1";
                 document.getElementById("maintext").innerHTML = "You live in the school dorms, "
@@ -218,13 +212,9 @@ function FrText(){
                 }
         break;
         case 21:
-            document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block'; 
+            EndScreen()
             document.getElementById("button1").style.display = 'block';
-            document.getElementById("button").style.display = 'flex';
-            document.getElementById("end").style.display = 'flex';
             document.getElementById("next").style.display = 'none';
-            document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "Day 1";
                  if (localStorage.getItem(questions[3])=="Perents house") {
                     document.getElementById("maintext").innerHTML = "You live with your perents, "
@@ -272,6 +262,33 @@ function FrText(){
                 }
         break;
     }
+    switch (order) {
+        case 1:
+            document.getElementById('background').src='Photos/hall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 2:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 3:
+            document.getElementById('background').src='Photos/class.png'
+            document.getElementById('background').style.width ="1200px"
+            document.getElementById('background').style.height ="600px"
+        break;
+        case 14:
+            document.getElementById('background').src='Photos/wont.png'
+            document.getElementById('background').style.width ="1300px"
+            document.getElementById('background').style.height ="560px"
+        break;
+        case 13: case 16:
+            document.getElementById('background').src='Photos/out.png'
+            document.getElementById('background').style.width ="1300px"
+            document.getElementById('background').style.height ="550px"
+        break;
+    }
     order++
 }
 function GetAnswer1(){
@@ -288,16 +305,9 @@ function GetAnswer1(){
             text++
             break;
         case 12: case 15:
-            if (localStorage.getItem(textStart + " "+word + textEnd)== "Sure"){
-                document.getElementById("q").innerHTML = Student1[st];
-                document.getElementById("ans1").style.display = 'none';
-                document.getElementById("ans2").style.display = 'none';
-            }else{
-                st++
-                document.getElementById("q").innerHTML = Student1[st];
-                document.getElementById("ans1").style.display = 'none';
-                document.getElementById("ans2").style.display = 'none';
-            }
+            document.getElementById("q").innerHTML = Student1[st];
+            document.getElementById("ans1").style.display = 'none';
+            document.getElementById("ans2").style.display = 'none';
             st=0
         break;
         case 18: case 20:
@@ -307,29 +317,40 @@ function GetAnswer1(){
             document.getElementById("ans4").style.display = 'none';
             switch (change) {
                 case 1:
-                    if (localStorage.getItem(questions[3])=="Perents house") {
-                        textStart = text1[text];
-                        word = localStorage.getItem(questions[3]).toLowerCase();
-                        Narratortext1 = textStart+word;
-                            document.getElementById("q").innerHTML = Narratortext1;
-                    }else{
-                        textStart = text1[text].slice(0,22);
-                        word = localStorage.getItem(questions[3]).toLowerCase();
-                        Narratortext1 = textStart+word;
-                            document.getElementById("q").innerHTML = Narratortext1;
-                    }
+                    textStart = text1[text];
+                    word = localStorage.getItem(questions[3]).toLowerCase();
+                    Narratortext1 = textStart+word;
+                    document.getElementById("q").innerHTML = Narratortext1;
                     text++
                 break;
                 case 2:
-                       text++
-                        textStart = text1[text].slice(0,14);
-                        textEnd = text1[text].slice(15,53);
-                        word = localStorage.getItem(questions[4]).toLowerCase();
-                        Narratortext2 = textStart+word+textEnd;
-                            document.getElementById("q").innerHTML = Narratortext2;
+                    text++
+                    textStart = text1[text].slice(0,14);
+                    textEnd = text1[text].slice(15,53);
+                    word = localStorage.getItem(questions[4]).toLowerCase();
+                    Narratortext2 = textStart+word+textEnd;
+                    document.getElementById("q").innerHTML = Narratortext2;
                 break;
             }
         change++
+        break;
+    }
+    switch (order) {
+        case 10: 
+            document.getElementById('background').src='Photos/wont.png'
+            document.getElementById('background').style.width ="1300px"
+            document.getElementById('background').style.height ="560px"
+        break;
+        case 18:
+            if(localStorage.getItem(questions[3])== Answerbox1[3]){
+                document.getElementById('background').src='Photos/house.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="550px"
+            }else{
+                document.getElementById('background').src='Photos/Dorms.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="600px"
+            }
         break;
     }
     order++
@@ -348,26 +369,10 @@ function GetAnswer2(){
             text++
             break;
         case 12: case 15:
-            if (localStorage.getItem(textStart + " "+word + textEnd)== "Sure"){
-                document.getElementById("q").innerHTML = Student1[st];
-                document.getElementById("ans1").style.display = 'none';
-                document.getElementById("ans2").style.display = 'none';
-                if (order<14) {
-                    localStorage.setItem("is", St1question);
-                }else{
-                    localStorage.setItem("is2", St2question);    
-                }
-            }else{
-                st++
-                document.getElementById("q").innerHTML = Student1[st];
-                document.getElementById("ans1").style.display = 'none';
-                document.getElementById("ans2").style.display = 'none';
-                if (order<14) {
-                    localStorage.setItem("isnot", St1question);
-                }else{
-                    localStorage.setItem("isnot2", St2question);    
-                }
-            }
+            st++
+            document.getElementById("q").innerHTML = Student1[st];
+            document.getElementById("ans1").style.display = 'none';
+            document.getElementById("ans2").style.display = 'none';
             st=0
         break;
         case 18: case 20:
@@ -377,29 +382,40 @@ function GetAnswer2(){
             document.getElementById("ans4").style.display = 'none';
             switch (change) {
                 case 1:
-                    if (localStorage.getItem(questions[3])=="Perents house") {
-                        textStart = text1[text];
-                        word = localStorage.getItem(questions[3]).toLowerCase();
-                        Narratortext1 = textStart+word;
-                            document.getElementById("q").innerHTML = Narratortext1;
-                    }else{
-                        textStart = text1[text].slice(0,22);
-                        word = localStorage.getItem(questions[3]).toLowerCase();
-                        Narratortext1 = textStart+word;
-                            document.getElementById("q").innerHTML = Narratortext1;
-                    }
+                    textStart = text1[text].slice(0,22);
+                    word = localStorage.getItem(questions[3]).toLowerCase();
+                    Narratortext1 = textStart+word;
+                    document.getElementById("q").innerHTML = Narratortext1;
                     text++
                 break;
                 case 2:
-                       text++
-                        textStart = text1[text].slice(0,14);
-                        textEnd = text1[text].slice(15,53);
-                        word = localStorage.getItem(questions[4]).toLowerCase();
-                        Narratortext2 = textStart+word+textEnd;
-                            document.getElementById("q").innerHTML = Narratortext2;
+                    text++
+                    textStart = text1[text].slice(0,14);
+                    textEnd = text1[text].slice(15,53);
+                    word = localStorage.getItem(questions[4]).toLowerCase();
+                    Narratortext2 = textStart+word+textEnd;
+                    document.getElementById("q").innerHTML = Narratortext2;
                 break;
             }
         change++
+        break;
+    }
+    switch (order) {
+        case 10: 
+            document.getElementById('background').src='Photos/wont.png'
+            document.getElementById('background').style.width ="1300px"
+            document.getElementById('background').style.height ="560px"
+        break;
+        case 18:
+            if(localStorage.getItem(questions[3])== Answerbox1[3]){
+                document.getElementById('background').src='Photos/house.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="550px"
+            }else{
+                document.getElementById('background').src='Photos/Dorms.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="600px"
+            }
         break;
     }
     order++
@@ -416,60 +432,13 @@ function GetAnswer3(){
             document.getElementById("ans3").style.display = 'none';
             document.getElementById("ans4").style.display = 'none';
             text++
-            break;
-        case 12: case 15:
-            if (localStorage.getItem(textStart + " "+word + textEnd)== "Sure"){
-                document.getElementById("q").innerHTML = Student1[st];
-                document.getElementById("ans1").style.display = 'none';
-                document.getElementById("ans2").style.display = 'none';
-                if (order<14) {
-                    localStorage.setItem("is", St1question);
-                }else{
-                    localStorage.setItem("is2", St2question);    
-                }
-            }else{
-                st++
-                document.getElementById("q").innerHTML = Student1[st];
-                document.getElementById("ans1").style.display = 'none';
-                document.getElementById("ans2").style.display = 'none';
-                if (order<14) {
-                    localStorage.setItem("isnot", St1question);
-                }else{
-                    localStorage.setItem("isnot2", St2question);    
-                }
-            }
-            st=0
         break;
-        case 18: case 20:
-            document.getElementById("ans1").style.display = 'none';
-            document.getElementById("ans2").style.display = 'none';
-            document.getElementById("ans3").style.display = 'none';
-            document.getElementById("ans4").style.display = 'none';
-            switch (change) {
-                case 1:
-                    if (localStorage.getItem(questions[3])=="Perents house") {
-                        textStart = text1[text];
-                        word = localStorage.getItem(questions[3]).toLowerCase();
-                        Narratortext1 = textStart+word;
-                            document.getElementById("q").innerHTML = Narratortext1;
-                    }else{
-                        textStart = text1[text].slice(0,22);
-                        word = localStorage.getItem(questions[3]).toLowerCase();
-                        Narratortext1 = textStart+word;
-                            document.getElementById("q").innerHTML = Narratortext1;
-                    }
-                    text++
-                break;
-                case 2:
-                       text++
-                        textStart = text1[text].slice(0,14);
-                        textEnd = text1[text].slice(15,53);
-                        word = localStorage.getItem(questions[4]).toLowerCase();
-                        Narratortext2 = textStart+word+textEnd;
-                            document.getElementById("q").innerHTML = Narratortext2;
-                break;
-            }
-        change++
+    }
+    switch (order) {
+        case 10: 
+            document.getElementById('background').src='Photos/wont.png'
+            document.getElementById('background').style.width ="1300px"
+            document.getElementById('background').style.height ="560px"
         break;
     }
     order++
@@ -479,68 +448,14 @@ function GetAnswer4(){
     Value = document.getElementById("ans4").innerHTML;
     localStorage.setItem(Key, Value)
     switch (order) {
-        case 6: case 8: case 10:
+        case 6: case 8:
             document.getElementById("q").innerHTML = text1[text];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
             document.getElementById("ans4").style.display = 'none';
             text++
-            break;
-        case 12: case 15:
-            if (localStorage.getItem(textStart + " "+word + textEnd)== "Sure"){
-                document.getElementById("q").innerHTML = Student1[st];
-                document.getElementById("ans1").style.display = 'none';
-                document.getElementById("ans2").style.display = 'none';
-                if (order<14) {
-                    localStorage.setItem("is", St1question);
-                }else{
-                    localStorage.setItem("is2", St2question);    
-                }
-            }else{
-                st++
-                document.getElementById("q").innerHTML = Student1[st];
-                document.getElementById("ans1").style.display = 'none';
-                document.getElementById("ans2").style.display = 'none';
-                if (order<14) {
-                    localStorage.setItem("isnot", St1question);
-                }else{
-                    localStorage.setItem("isnot2", St2question);    
-                }
-            }
-            st=0
-        break;
-        case 18: case 20:
-            document.getElementById("ans1").style.display = 'none';
-            document.getElementById("ans2").style.display = 'none';
-            document.getElementById("ans3").style.display = 'none';
-            document.getElementById("ans4").style.display = 'none';
-            switch (change) {
-                case 1:
-                    if (localStorage.getItem(questions[3])=="Perents house") {
-                        textStart = text1[text];
-                        word = localStorage.getItem(questions[3]).toLowerCase();
-                        Narratortext1 = textStart+word;
-                            document.getElementById("q").innerHTML = Narratortext1;
-                    }else{
-                        textStart = text1[text].slice(0,22);
-                        word = localStorage.getItem(questions[3]).toLowerCase();
-                        Narratortext1 = textStart+word;
-                            document.getElementById("q").innerHTML = Narratortext1;
-                    }
-                    text++
-                break;
-                case 2:
-                       text++
-                        textStart = text1[text].slice(0,14);
-                        textEnd = text1[text].slice(15,53);
-                        word = localStorage.getItem(questions[4]).toLowerCase();
-                        Narratortext2 = textStart+word+textEnd;
-                            document.getElementById("q").innerHTML = Narratortext2;
-                break;
-            }
-        change++
-        break;
+        break;       
     }
     order++
 }

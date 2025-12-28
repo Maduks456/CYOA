@@ -1,36 +1,34 @@
 
-    localStorage.clear();
-    function ToDay2(){
+localStorage.clear();
+function Show() {
+        document.getElementById("days").style.display = 'none';
+        document.getElementById("maintext").style.display = 'none';
+        document.getElementById("button").style.display = 'none';
+        document.getElementById("end").style.display = 'none';
+        document.getElementById("background").style.display = 'block';
+        document.getElementById("background").src='Photos/out2.png'
+        document.getElementById('background').style.width ="1400px"
+        document.getElementById('background').style.height ="630px"
+}
+function ToDay2(){
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next2").style.display = 'block';
-    document.getElementById("days").style.display = 'none';
-    document.getElementById("maintext").style.display = 'none';
-    document.getElementById("button").style.display = 'none';
-    document.getElementById("end").style.display = 'none';
+    Show()
 }
 function ToDay3() {
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next3").style.display = 'block';
-    document.getElementById("days").style.display = 'none';
-    document.getElementById("maintext").style.display = 'none';
-    document.getElementById("button").style.display = 'none';
-    document.getElementById("end").style.display = 'none';
+    Show()
 }
 function ToDay4() {
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next4").style.display = 'block';
-    document.getElementById("days").style.display = 'none';
-    document.getElementById("maintext").style.display = 'none';
-    document.getElementById("button").style.display = 'none';
-    document.getElementById("end").style.display = 'none';
+    Show()
 }
 function ToDay5() {
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next5").style.display = 'block';
-    document.getElementById("days").style.display = 'none';
-    document.getElementById("maintext").style.display = 'none';
-    document.getElementById("button").style.display = 'none';
-    document.getElementById("end").style.display = 'none';
+    Show()
 }
 function OverView() {
     document.getElementById("button5").style.display = 'none';
@@ -120,4 +118,11 @@ function OverView() {
         }
     }
 }
-
+function EndScreen() {
+    document.getElementById("days").style.display = 'block';//
+    document.getElementById("maintext").style.display = 'block';//
+    document.getElementById("button").style.display = 'flex';//
+    document.getElementById("end").style.display = 'flex';//
+    document.getElementById("background").style.display = 'none';//
+    document.getElementById("q"). innerHTML= "";//
+}

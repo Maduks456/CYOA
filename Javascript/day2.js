@@ -40,12 +40,9 @@ const answerday2box3 = [
     "Everything",
     ""
     ];
-
     qu2=0;
 // later its for making a friend
     let guess = Math.floor(Math.random() * 2)+1 ;
-    console.log("guess is "+guess);
-    
 //narrator text and array variable
 const narrator2 = [ 
     "When you entered the school you met your first friend and talked till the math lesson started", 
@@ -65,13 +62,10 @@ const narrator2 = [
     "After class a crazy classmate said your his friend now",
     "The next lesson is physics",
     "The teacher is talking about safty rules in the physics classroom"
-
 ];
 n=0
 //order variable
 order2=1;
-console.log(order2);
-
 //  Variables to save data to local storage
 let key;
 let value;
@@ -96,12 +90,10 @@ function Next2() {
                 n++
                 document.getElementById("q").innerHTML = narrator2[n];
                 checks++
-
-                
             }
             n++
         break;
-        case 3: case 4:case 10: case 11: case 12:case 15:case 18:  
+        case 3: case 4:case 10: case 11: case 12: case 15: case 18:  
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
@@ -127,8 +119,6 @@ function Next2() {
                     document.getElementById("ans32").innerHTML = answerday2box3[qu2];
                 }
             qu2++
-            console.log(n);
-            
         break;
         case 16:
             document.getElementById("ans12").style.display = 'none';
@@ -150,17 +140,12 @@ function Next2() {
             qu2++
         break;
         case 23:
-
-            document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block';
+            EndScreen()
             document.getElementById("button2").style.display = 'block';
-            document.getElementById("button").style.display = 'flex';
-            document.getElementById("end").style.display = 'flex';
             document.getElementById("next2").style.display = 'none';
             document.getElementById("button1").style.display = 'none';
-            document.getElementById("q"). innerHTML= "";
-            document.getElementById("days"). innerHTML= "day 2";
-            // mmath answer
+            document.getElementById("days"). innerHTML= "Day 2";
+            // math answer
               if (localStorage.getItem(questions2[0])==answerday2box1[0]){
             document.getElementById("maintext").innerHTML = "Today you in math answered the question with a joke and half of the class knows your funny, " 
             }else if (localStorage.getItem(questions2[0])==answerday2box2[0]){
@@ -180,6 +165,23 @@ function Next2() {
             }
         break;
     }
+    switch (order2) {
+        case 7: case 16:
+            document.getElementById('background').src='Photos/hall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 1: case 11: case 18:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 3: case 12: case 19:
+            document.getElementById('background').src='Photos/class.png'
+            document.getElementById('background').style.width ="1200px"
+            document.getElementById('background').style.height ="600px"
+        break;
+    }
     order2++
 }
 function getAnswer1() {
@@ -187,59 +189,59 @@ function getAnswer1() {
     value = document.getElementById("ans12").innerHTML;
     localStorage.setItem(key, value)
     switch (order2) {
+        case 8:
+            if (localStorage.getItem(questions2[1])==answerday2box2[1]) {
+                document.getElementById('background').src='Photos/hall_wall.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="580px"
+            }else if (localStorage.getItem(questions2[1])==answerday2box3[1]) {
+                document.getElementById('background').src='Photos/hall.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="580px"
+            }else{
+                document.getElementById('background').src='Photos/wont.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="560px"
+            } 
+        break;
+        case 17:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 22:
+            if(localStorage.getItem(questions[3])== Answerbox1[3]){
+                document.getElementById('background').src='Photos/house.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="550px"
+    
+            }else{
+                document.getElementById('background').src='Photos/Dorms.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="600px"
+            }
+        break;
+    }
+    switch (order2) {
         case 6:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            if (localStorage.getItem(questions2[0])== answerday2box1[0]) {
-                document.getElementById("q").innerHTML = narrator2[n];
-                n=n+2
-            }else if (localStorage.getItem(questions2[0])== answerday2box2[0]) {
-                n++;
-                document.getElementById("q").innerHTML = narrator2[n];
-                n++
-            } else {
-                n=n+2;
-                document.getElementById("q").innerHTML = narrator2[n];
-            }
+            document.getElementById("q").innerHTML = narrator2[n];
+            n=n+2
             n++
         break;
         case 8:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            if (localStorage.getItem(questions2[1])== answerday2box1[1]) {
-                document.getElementById("q").innerHTML = narrator2[n];
-                n=n+1
-                order2=order2+2;
-            }else if (localStorage.getItem(questions2[1])== answerday2box2[1]) {
-                n++;
-                document.getElementById("q").innerHTML = narrator2[n];
-                order2=order2+2;
-            } else {
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                document.getElementById("q").innerHTML = questions2[qu2];
-                if(answerday2box1[qu2] != ""){
-                    document.getElementById("ans12").style.display = 'block';
-                    document.getElementById("ans12").innerHTML = answerday2box1[qu2];
-                }
-                if(answerday2box2[qu2] != ""){
-                    document.getElementById("ans22").style.display = 'block';
-                    document.getElementById("ans22").innerHTML = answerday2box2[qu2];
-                }
-                if(answerday2box3[qu2] != ""){
-                    document.getElementById("ans32").style.display = 'block';
-                    document.getElementById("ans32").innerHTML = answerday2box3[qu2];
-                }
-                
-            }
+            document.getElementById("q").innerHTML = narrator2[n];
+            n=n+1
+            order2=order2+2;
             qu2++
             n++
         break;
         case 9:
-            console.log("order is "+order2);
             order2++
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
@@ -251,23 +253,14 @@ function getAnswer1() {
             }else{
                 document.getElementById("q").innerHTML = "Im gonna be your friend";
             }
-  
-            console.log(order2);
-            
             n++
         break;
         case 14:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            if(localStorage.getItem(questions2[3]) == answerday2box2[3]){
-                document.getElementById("q").innerHTML = narrator2[n]
-                n=n+2
-                order2++
-            }else{
-                n++
-                document.getElementById("q").innerHTML = narrator2[n];
-            }
+            n++
+            document.getElementById("q").innerHTML = narrator2[n];
             n++
         break;
         case 17:
@@ -297,35 +290,23 @@ function getAnswer1() {
             qu2++
         break;
         case 21:
-            if(localStorage.getItem(questions2[6])==answerday2box1[6]||localStorage.getItem(questions2[6])==answerday2box3[6]){
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                document.getElementById("q").innerHTML = questions2[qu2];
-                if(answerday2box1[qu2] != ""){
-                    document.getElementById("ans12").style.display = 'block';
-                    document.getElementById("ans12").innerHTML = answerday2box1[qu2];
-                }
-                if(answerday2box2[qu2] != ""){
-                    document.getElementById("ans22").style.display = 'block';
-                    document.getElementById("ans22").innerHTML = answerday2box2[qu2];
-                }
-                if(answerday2box3[qu2] != ""){
-                    document.getElementById("ans32").style.display = 'block';
-                    document.getElementById("ans32").innerHTML = answerday2box3[qu2];
-                }
-            qu2++
-            }else{
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                if (localStorage.getItem(questions[3])=="School dorms"){
-                    document.getElementById("q").innerHTML = "you went to the dorms";
-                }else{
-                document.getElementById("q").innerHTML = "You went to your perents home";
-                }
-                order2++
+            document.getElementById("ans12").style.display = 'none';
+            document.getElementById("ans22").style.display = 'none';
+            document.getElementById("ans32").style.display = 'none';
+            document.getElementById("q").innerHTML = questions2[qu2];
+            if(answerday2box1[qu2] != ""){
+                document.getElementById("ans12").style.display = 'block';
+                document.getElementById("ans12").innerHTML = answerday2box1[qu2];
             }
+            if(answerday2box2[qu2] != ""){
+                document.getElementById("ans22").style.display = 'block';
+                document.getElementById("ans22").innerHTML = answerday2box2[qu2];
+            }
+            if(answerday2box3[qu2] != ""){
+                document.getElementById("ans32").style.display = 'block';
+                document.getElementById("ans32").innerHTML = answerday2box3[qu2];
+            }
+            qu2++
         break;
         case 22:
             document.getElementById("ans12").style.display = 'none';
@@ -345,53 +326,55 @@ function getAnswer2() {
     value = document.getElementById("ans22").innerHTML;
     localStorage.setItem(key, value)
     switch (order2) {
+        case 8:
+            if (localStorage.getItem(questions2[1])==answerday2box2[1]) {
+                document.getElementById('background').src='Photos/hall_wall.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="580px"
+            }else if (localStorage.getItem(questions2[1])==answerday2box3[1]) {
+                document.getElementById('background').src='Photos/hall.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="580px"
+            }else{
+                document.getElementById('background').src='Photos/wont.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="560px"
+            } 
+        break;
+        case 17:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 22:
+            if(localStorage.getItem(questions[3])== Answerbox1[3]){
+                document.getElementById('background').src='Photos/house.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="550px"
+    
+            }else{
+                document.getElementById('background').src='Photos/Dorms.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="600px"
+            }
+        break;
+    }
+    switch (order2) {
         case 6:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            if (localStorage.getItem(questions2[0])== answerday2box1[0]) {
-                document.getElementById("q").innerHTML = narrator2[n];
-                n=n+2
-            }else if (localStorage.getItem(questions2[0])== answerday2box2[0]) {
-                n++;
-                document.getElementById("q").innerHTML = narrator2[n];
-                n++
-            } else {
-                n=n+2;
-                document.getElementById("q").innerHTML = narrator2[n];
-            }
-            n++
+            n++;
+            document.getElementById("q").innerHTML = narrator2[n];
+            n=n+2
         break;
         case 8:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            if (localStorage.getItem(questions2[1])== answerday2box1[1]) {
-                document.getElementById("q").innerHTML = narrator2[n];
-                n=n+1
-                order2=order2+2;
-            }else if (localStorage.getItem(questions2[1])== answerday2box2[1]) {
-                n++;
-                document.getElementById("q").innerHTML = narrator2[n];
-                order2=order2+2;
-            } else {
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                document.getElementById("q").innerHTML = questions2[qu2];
-                if(answerday2box1[qu2] != ""){
-                    document.getElementById("ans12").style.display = 'block';
-                    document.getElementById("ans12").innerHTML = answerday2box1[qu2];
-                }
-                if(answerday2box2[qu2] != ""){
-                    document.getElementById("ans22").style.display = 'block';
-                    document.getElementById("ans22").innerHTML = answerday2box2[qu2];
-                }
-                if(answerday2box3[qu2] != ""){
-                    document.getElementById("ans32").style.display = 'block';
-                    document.getElementById("ans32").innerHTML = answerday2box3[qu2];
-                }
-            }
+            n++;
+            document.getElementById("q").innerHTML = narrator2[n];
+            order2=order2+2;
             qu2++
             n++
         break;
@@ -413,14 +396,9 @@ function getAnswer2() {
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            if(localStorage.getItem(questions2[3]) == answerday2box2[3]){
-                document.getElementById("q").innerHTML = narrator2[n]
-                n=n+2
-                order2++
-            }else{
-                n++
-                document.getElementById("q").innerHTML = narrator2[n];
-            }
+            document.getElementById("q").innerHTML = narrator2[n]
+            n=n+2
+            order2++
             n++
         break;
         case 17:
@@ -450,35 +428,15 @@ function getAnswer2() {
             qu2++
         break;
         case 21:
-            if(localStorage.getItem(questions2[6])==answerday2box1[6]||localStorage.getItem(questions2[6])==answerday2box3[6]){
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                document.getElementById("q").innerHTML = questions2[qu2];
-                if(answerday2box1[qu2] != ""){
-                    document.getElementById("ans12").style.display = 'block';
-                    document.getElementById("ans12").innerHTML = answerday2box1[qu2];
-                }
-                if(answerday2box2[qu2] != ""){
-                    document.getElementById("ans22").style.display = 'block';
-                    document.getElementById("ans22").innerHTML = answerday2box2[qu2];
-                }
-                if(answerday2box3[qu2] != ""){
-                    document.getElementById("ans32").style.display = 'block';
-                    document.getElementById("ans32").innerHTML = answerday2box3[qu2];
-                }
-            qu2++
+            document.getElementById("ans12").style.display = 'none';
+            document.getElementById("ans22").style.display = 'none';
+            document.getElementById("ans32").style.display = 'none';
+            if (localStorage.getItem(questions[3])=="School dorms"){
+                document.getElementById("q").innerHTML = "you went to the dorms";
             }else{
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                if (localStorage.getItem(questions[3])=="School dorms"){
-                    document.getElementById("q").innerHTML = "you went to the dorms";
-                }else{
                 document.getElementById("q").innerHTML = "You went to your perents home";
-                }
-                order2++
             }
+            order2++
         break;
         case 22:
             document.getElementById("ans12").style.display = 'none';
@@ -491,6 +449,20 @@ function getAnswer2() {
             }
         break;
     }
+    switch (order2) {
+        case 22:
+            if(localStorage.getItem(questions[3])== Answerbox1[3]){
+                document.getElementById('background').src='Photos/house.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="550px"
+    
+            }else{
+                document.getElementById('background').src='Photos/Dorms.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="600px"
+            }
+        break;
+    }
     order2++
 }
 function getAnswer3() {
@@ -498,84 +470,55 @@ function getAnswer3() {
     value = document.getElementById("ans32").innerHTML;
     localStorage.setItem(key, value)
     switch (order2) {
+        case 8:
+            if (localStorage.getItem(questions2[1])==answerday2box2[1]) {
+                document.getElementById('background').src='Photos/hall_wall.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="580px"
+            }else if (localStorage.getItem(questions2[1])==answerday2box3[1]) {
+                document.getElementById('background').src='Photos/hall.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="580px"
+            }else{
+                document.getElementById('background').src='Photos/wont.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="560px"
+            } 
+        break;
+        case 17:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+    }
+    switch (order2) {
         case 6:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            if (localStorage.getItem(questions2[0])== answerday2box1[0]) {
-                document.getElementById("q").innerHTML = narrator2[n];
-                n=n+2
-            }else if (localStorage.getItem(questions2[0])== answerday2box2[0]) {
-                n++;
-                document.getElementById("q").innerHTML = narrator2[n];
-                n++
-            } else {
                 n=n+2;
                 document.getElementById("q").innerHTML = narrator2[n];
-            }
             n++
         break;
         case 8:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            if (localStorage.getItem(questions2[1])== answerday2box1[1]) {
-                document.getElementById("q").innerHTML = narrator2[n];
-                n=n+1
-                order2=order2+2;
-            }else if (localStorage.getItem(questions2[1])== answerday2box2[1]) {
-                n++;
-                document.getElementById("q").innerHTML = narrator2[n];
-                order2=order2+2;
-            } else {
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                document.getElementById("q").innerHTML = questions2[qu2];
-                if(answerday2box1[qu2] != ""){
-                    document.getElementById("ans12").style.display = 'block';
-                    document.getElementById("ans12").innerHTML = answerday2box1[qu2];
-                }
-                if(answerday2box2[qu2] != ""){
-                    document.getElementById("ans22").style.display = 'block';
-                    document.getElementById("ans22").innerHTML = answerday2box2[qu2];
-                }
-                if(answerday2box3[qu2] != ""){
-                    document.getElementById("ans32").style.display = 'block';
-                    document.getElementById("ans32").innerHTML = answerday2box3[qu2];
-                }
+            document.getElementById("q").innerHTML = questions2[qu2];
+            if(answerday2box1[qu2] != ""){
+                document.getElementById("ans12").style.display = 'block';
+                document.getElementById("ans12").innerHTML = answerday2box1[qu2];
+            }
+            if(answerday2box2[qu2] != ""){
+                document.getElementById("ans22").style.display = 'block';
+                document.getElementById("ans22").innerHTML = answerday2box2[qu2];
+            }
+            if(answerday2box3[qu2] != ""){
+                document.getElementById("ans32").style.display = 'block';
+                document.getElementById("ans32").innerHTML = answerday2box3[qu2];
             }
             qu2++
             n++
-        break;
-        case 9:
-            document.getElementById("ans12").style.display = 'none';
-            document.getElementById("ans22").style.display = 'none';
-            document.getElementById("ans32").style.display = 'none';
-            if (localStorage.getItem(questions[0])== "Anime" ){
-                document.getElementById("q").innerHTML = "Im not gonna be your friend anime weeb";
-            }else if(guess == 1) {
-                document.getElementById("q").innerHTML = "Im not gonna be your friend";
-            }else{
-                document.getElementById("q").innerHTML = "Im gonna be your friend";
-            }
-        break;
-        case 14:
-         
-            document.getElementById("ans12").style.display = 'none';
-            document.getElementById("ans22").style.display = 'none';
-            document.getElementById("ans32").style.display = 'none';
-            if(localStorage.getItem(questions2[3]) == answerday2box2[3]){
-                document.getElementById("q").innerHTML = narrator2[n]
-                n=n+2
-                order2++
-            }else{
-                n++
-                document.getElementById("q").innerHTML = narrator2[n];
-            }
-            console.log("n is: "+n);
-            n++
-            console.log("n after: "+n);
         break;
         case 17:
             document.getElementById("ans12").style.display = 'none';
@@ -584,64 +527,24 @@ function getAnswer3() {
             document.getElementById("q").innerHTML = narrator2[n];
             n++
         break;
-        case 20:
+        case 21:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
             document.getElementById("q").innerHTML = questions2[qu2];
-                if(answerday2box1[qu2] != ""){
-                    document.getElementById("ans12").style.display = 'block';
-                    document.getElementById("ans12").innerHTML = answerday2box1[qu2];
-                }
-                if(answerday2box2[qu2] != ""){
-                    document.getElementById("ans22").style.display = 'block';
-                    document.getElementById("ans22").innerHTML = answerday2box2[qu2];
-                }
-                if(answerday2box3[qu2] != ""){
-                    document.getElementById("ans32").style.display = 'block';
-                    document.getElementById("ans32").innerHTML = answerday2box3[qu2];
-                }
-            qu2++
-        break;
-        case 21:
-            if(localStorage.getItem(questions2[6])==answerday2box1[6]||localStorage.getItem(questions2[6])==answerday2box3[6]){
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                document.getElementById("q").innerHTML = questions2[qu2];
-                if(answerday2box1[qu2] != ""){
-                    document.getElementById("ans12").style.display = 'block';
-                    document.getElementById("ans12").innerHTML = answerday2box1[qu2];
-                }
-                if(answerday2box2[qu2] != ""){
-                    document.getElementById("ans22").style.display = 'block';
-                    document.getElementById("ans22").innerHTML = answerday2box2[qu2];
-                }
-                if(answerday2box3[qu2] != ""){
-                    document.getElementById("ans32").style.display = 'block';
-                    document.getElementById("ans32").innerHTML = answerday2box3[qu2];
-                }
-            qu2++
-            }else{
-                document.getElementById("ans12").style.display = 'none';
-                document.getElementById("ans22").style.display = 'none';
-                document.getElementById("ans32").style.display = 'none';
-                if (localStorage.getItem(questions[3])=="School dorms"){
-                    document.getElementById("q").innerHTML = "you went to the dorms";
-                }else{
-                document.getElementById("q").innerHTML = "You went to your perents home";
-                }
+            if(answerday2box1[qu2] != ""){
+                document.getElementById("ans12").style.display = 'block';
+                document.getElementById("ans12").innerHTML = answerday2box1[qu2];
             }
-        break;
-        case 22:
-            document.getElementById("ans12").style.display = 'none';
-            document.getElementById("ans22").style.display = 'none';
-            document.getElementById("ans32").style.display = 'none';
-            if (localStorage.getItem(questions[3])=="School dorms"){
-                document.getElementById("q").innerHTML = "you went to the dorms";
-            }else{
-                document.getElementById("q").innerHTML = "You went to your perents house";
+            if(answerday2box2[qu2] != ""){
+                document.getElementById("ans22").style.display = 'block';
+                document.getElementById("ans22").innerHTML = answerday2box2[qu2];
             }
+            if(answerday2box3[qu2] != ""){
+                document.getElementById("ans32").style.display = 'block';
+                document.getElementById("ans32").innerHTML = answerday2box3[qu2];
+            }
+            qu2++
         break;
     }
     order2++

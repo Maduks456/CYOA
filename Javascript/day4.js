@@ -1,5 +1,6 @@
-
+//order of this day
 let order4 = 1;
+//questions/answers and variable for it
 const questions4= [
     "Which friend do you want to spend time with?",
     "The teacher asks us how much do we know?",
@@ -28,6 +29,7 @@ const Answerday4box4= [
     ""
 ]
 let qu4 = 0
+//narrator text and array variable
 const narrator4 = [
     "You spent time with you friend before class",
     "you waited till the class started",
@@ -47,6 +49,7 @@ const narrator4 = [
     "You scorch yor arm with the fire" 
 ]
 let n4 =0
+//LocalStorage key and value variable
 let key4
 let value4
 function Next4(){
@@ -156,15 +159,12 @@ function Next4(){
             }
         break;
         case 18:
-            document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block';
+            EndScreen()
             document.getElementById("button4").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
-            document.getElementById("end").style.display = 'flex';
             document.getElementById("next4").style.display = 'none';
             document.getElementById("button3").style.display = 'none';
-            document.getElementById("q"). innerHTML= "";
-            document.getElementById("days"). innerHTML= "day 4";
+            document.getElementById("days"). innerHTML= "Day 4";
                 if (localStorage.getItem(questions4[0])== Answerday4box1[0]) {
                     document.getElementById("maintext").innerHTML = "Today You waited alone till the lesson, " 
                 }else{
@@ -192,8 +192,38 @@ function Next4(){
                 }else{
                     document.getElementById("maintext").innerHTML += "you tryed to do it but couldnt do it"
                 }
+        break;
+    }
+    switch (order4) {
+        case 1:
+            document.getElementById('background').src='Photos/hall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"  
+        break;
+        case 3: case 13:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 4: case 14:
+            document.getElementById('background').src='Photos/class.png'
+            document.getElementById('background').style.width ="1200px"
+            document.getElementById('background').style.height ="600px"
+        break;
+        case 17:
+            if(localStorage.getItem(questions[3])== Answerbox1[3]){
+                document.getElementById('background').src='Photos/house.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="550px"
+    
+            }else{
+                document.getElementById('background').src='Photos/Dorms.png'
+                document.getElementById('background').style.width ="1400px"
+                document.getElementById('background').style.height ="600px"
+            }
+        break;
+    }
     order4++
-}
 }
 function Getanswer1() {
     key4= document.getElementById("q").innerHTML;
@@ -319,7 +349,6 @@ function Getanswer2() {
             } 
             order4++
         break;
-
     }
     order4++
 }
@@ -369,8 +398,7 @@ function Getanswer3() {
             n4++
         break;
     }
-    order4++
-    
+    order4++ 
 }
 function Getanswer4() {
     key4= document.getElementById("q").innerHTML;
@@ -387,5 +415,4 @@ function Getanswer4() {
         break;
     }
     order4++
-    
 }

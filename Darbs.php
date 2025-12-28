@@ -17,6 +17,7 @@
     <div class="main">
 
         <div class="main_front">
+            <img id="background" src="Photos/out2.png" alt="background">
           <div class="main_front_Endings" id="end">
             <div class="main_front_Endings-days " id="days">
             </div>

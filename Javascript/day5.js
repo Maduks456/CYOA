@@ -1,6 +1,6 @@
-let value5
-let key5 
+//order of this day
 let order5 = 1
+//questions/answers and variable for it
 const questions5 = [
     "You where thinking did I sleep well?",
     "How do you feel in class?",
@@ -34,10 +34,11 @@ const Answerday5box3= [
     ""
 ]
 qu5 =0
+//narrator text and array variable
 const narrator5= [
     "You went to the first lesson it latvian",
     "You sat in you chair till the teacher gave you a thing to do",
-    "You were listenig to your teacher closly",
+    "You were listening to your teacher closly",
     "The teacher gave you work that you need to do before the class ends",
     "For doing the work the teacher gave you a positive note",
     "For not doing the work the teacher gave you a negative note",
@@ -48,6 +49,9 @@ const narrator5= [
     "You stayed in the dorms"
 ]
 n5 =0
+//LocalStorage key and value variable
+let value5
+let key5 
 function Next5(){
     switch (order5) {
         case 1: case 6:
@@ -85,7 +89,6 @@ function Next5(){
                 if(localStorage.getItem(questions5[0])=="No"){
                     document.getElementById("ans35").style.display = 'block';
                     document.getElementById("ans35").innerHTML = Answerday5box3[qu5];
-                    qu5++
                 }
             qu5++
         break;
@@ -143,15 +146,12 @@ function Next5(){
             }
         break;
         case 14:
-            document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block';
+            EndScreen()
             document.getElementById("button5").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
-            document.getElementById("end").style.display = 'flex';
             document.getElementById("next5").style.display = 'none';
             document.getElementById("button4").style.display = 'none';
-            document.getElementById("q"). innerHTML= "";
-            document.getElementById("days"). innerHTML= "day 5";
+            document.getElementById("days"). innerHTML= "Day 5";
             if (localStorage.getItem(questions5[0])== Answerday5box1[0]) {
                 document.getElementById("maintext").innerHTML = "Today you slept well, " 
             }else{
@@ -193,9 +193,19 @@ function Next5(){
             }
         break;
     }
-    console.log("before is "+order5);
+    switch (order5) {
+        case 3:
+            document.getElementById('background').src='Photos/class.png'
+            document.getElementById('background').style.width ="1200px"
+            document.getElementById('background').style.height ="600px"
+        break;
+        case 8: case 12:
+            document.getElementById('background').src='Photos/hall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"  
+        break;
+    }
     order5++
-    console.log("After is "+order5); 
 }
 function get_answer1() {
     key5= document.getElementById("q").innerHTML;
@@ -252,9 +262,36 @@ function get_answer1() {
             n5++
         break;
     }
-    console.log("before is "+order5);
+    switch (order5) {
+        case 2:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 10:
+            document.getElementById('background').src='Photos/wont.png'
+            document.getElementById('background').style.width ="1300px"
+            document.getElementById('background').style.height ="560px"
+        break;
+        case 13:
+            if(localStorage.getItem(questions[3])== Answerbox1[3]){
+                document.getElementById('background').src='Photos/house.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="550px"
+            }else{
+                if (localStorage.getItem(questions5[5])== Answerday5box1[5]){
+                    document.getElementById('background').src='Photos/house.png'
+                    document.getElementById('background').style.width ="1300px"
+                    document.getElementById('background').style.height ="550px"
+                } else {
+                    document.getElementById('background').src='Photos/Dorms.png'
+                    document.getElementById('background').style.width ="1400px"
+                    document.getElementById('background').style.height ="600px"
+                }
+            }
+        break;
+    }
     order5++
-    console.log("After is "+order5); 
 }
 function get_answer2() {
     key5= document.getElementById("q").innerHTML;
@@ -312,11 +349,37 @@ function get_answer2() {
             document.getElementById("ans35").style.display = 'none';
             n5++
         break;
-        
     }
-    console.log("before is "+order5);
+    switch (order5) {
+        case 2:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+        case 10:
+            document.getElementById('background').src='Photos/wont.png'
+            document.getElementById('background').style.width ="1300px"
+            document.getElementById('background').style.height ="560px"
+        break;
+        case 13:
+            if(localStorage.getItem(questions[3])== Answerbox1[3]){
+                document.getElementById('background').src='Photos/house.png'
+                document.getElementById('background').style.width ="1300px"
+                document.getElementById('background').style.height ="550px"
+            }else{
+                if (localStorage.getItem(questions5[5])== Answerday5box1[5]){
+                    document.getElementById('background').src='Photos/house.png'
+                    document.getElementById('background').style.width ="1300px"
+                    document.getElementById('background').style.height ="550px"
+                } else {
+                    document.getElementById('background').src='Photos/Dorms.png'
+                    document.getElementById('background').style.width ="1400px"
+                    document.getElementById('background').style.height ="600px"
+                }
+            }
+        break;
+    }
     order5++
-    console.log("After is "+order5); 
 }
 function get_answer3() {
     key5= document.getElementById("q").innerHTML;
@@ -338,6 +401,7 @@ function get_answer3() {
             document.getElementById("ans35").style.display = 'none';
             n5++
             order5 = 7
+            qu5++
         break;
         case 11:
             let start= narrator5[n5].slice(0,11)
@@ -349,7 +413,12 @@ function get_answer3() {
             n5++
         break;
     }
-    console.log("before is "+order5);
+    switch (order5) {
+        case 2:
+            document.getElementById('background').src='Photos/hall_wall.png'
+            document.getElementById('background').style.width ="1400px"
+            document.getElementById('background').style.height ="580px"
+        break;
+    }
     order5++
-    console.log("After is "+order5); 
 }
