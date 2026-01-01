@@ -51,9 +51,6 @@ const narrator3 = [
     "When I have free time I like gardening"
 ]
 let n3= 0;
-//LocalStorage key and value variable
-let key3;
-let value3;
 function Next3() {
     switch (order3) {
         case 1:
@@ -207,9 +204,9 @@ function Next3() {
     order3++
 }
 function getanswer1() {
-    key3= document.getElementById("q").innerHTML;
-    value3 = document.getElementById("ans13").innerHTML;
-    localStorage.setItem(key3, value3)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans13").innerHTML;
+    localStorage.setItem(Key, Value)
     
     switch (order3) {
         case 3:
@@ -278,9 +275,9 @@ function getanswer1() {
     order3++
 }
 function getanswer2() {
-    key3= document.getElementById("q").innerHTML;
-    value3 = document.getElementById("ans23").innerHTML;
-    localStorage.setItem(key3, value3)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans23").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order3) {
         case 3:
             document.getElementById("ans13").style.display = 'none';
@@ -345,9 +342,9 @@ function getanswer2() {
     order3++
 }
 function getanswer3() {
-    key3= document.getElementById("q").innerHTML;
-    value3 = document.getElementById("ans33").innerHTML;
-    localStorage.setItem(key3, value3)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans33").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order3) {
         case 4:
             document.getElementById("ans13").style.display = 'none';

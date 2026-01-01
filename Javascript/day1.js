@@ -75,9 +75,6 @@ let St1question;
 let St2question;
 let Narratortext1;
 let Narratortext2;
-//LocalStorage key and value variable
-let Key;
-let Value;
 function FrText(){
     switch (order) {
         case 1: case 2: case 3: case 4:  case 13: case 16:

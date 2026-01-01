@@ -49,9 +49,7 @@ const narrator4 = [
     "You scorch yor arm with the fire" 
 ]
 let n4 =0
-//LocalStorage key and value variable
-let key4
-let value4
+
 function Next4(){
     switch (order4) {
         case 1:
@@ -226,9 +224,9 @@ function Next4(){
     order4++
 }
 function Getanswer1() {
-    key4= document.getElementById("q").innerHTML;
-    value4 = document.getElementById("ans14").innerHTML;
-    localStorage.setItem(key4, value4)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans14").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order4) {
         case 2:
             n4++
@@ -290,9 +288,9 @@ function Getanswer1() {
     order4++
 }
 function Getanswer2() {
-    key4= document.getElementById("q").innerHTML;
-    value4 = document.getElementById("ans24").innerHTML;
-    localStorage.setItem(key4, value4)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans24").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order4) {
         case 2:
             document.getElementById("q").innerHTML = narrator4[n4]
@@ -353,9 +351,9 @@ function Getanswer2() {
     order4++
 }
 function Getanswer3() {
-    key4= document.getElementById("q").innerHTML;
-    value4 = document.getElementById("ans34").innerHTML;
-    localStorage.setItem(key4, value4)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans34").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order4) {
         case 2:
             document.getElementById("q").innerHTML = narrator4[n4]
@@ -401,9 +399,9 @@ function Getanswer3() {
     order4++ 
 }
 function Getanswer4() {
-    key4= document.getElementById("q").innerHTML;
-    value4 = document.getElementById("ans44").innerHTML;
-    localStorage.setItem(key4, value4)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans44").innerHTML;
+    localStorage.setItem(Key, Value)
         switch (order4) {
         case 2:
             document.getElementById("q").innerHTML = narrator4[n4]

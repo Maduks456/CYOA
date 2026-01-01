@@ -49,9 +49,7 @@ const narrator5= [
     "You stayed in the dorms"
 ]
 n5 =0
-//LocalStorage key and value variable
-let value5
-let key5 
+
 function Next5(){
     switch (order5) {
         case 1: case 6:
@@ -208,9 +206,9 @@ function Next5(){
     order5++
 }
 function get_answer1() {
-    key5= document.getElementById("q").innerHTML;
-    value5 = document.getElementById("ans15").innerHTML;
-    localStorage.setItem(key5, value5)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans15").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order5) {
         case 2: case 13:
             document.getElementById("q").innerHTML = narrator5[n5]
@@ -294,9 +292,9 @@ function get_answer1() {
     order5++
 }
 function get_answer2() {
-    key5= document.getElementById("q").innerHTML;
-    value5 = document.getElementById("ans25").innerHTML;
-    localStorage.setItem(key5, value5)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans25").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order5) {
         case 2:
             document.getElementById("q").innerHTML = narrator5[n5]
@@ -382,9 +380,9 @@ function get_answer2() {
     order5++
 }
 function get_answer3() {
-    key5= document.getElementById("q").innerHTML;
-    value5 = document.getElementById("ans35").innerHTML;
-    localStorage.setItem(key5, value5)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans35").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order5) {
         case 2:
             document.getElementById("q").innerHTML = narrator5[n5]

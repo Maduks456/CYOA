@@ -66,9 +66,7 @@ const narrator2 = [
 n=0
 //order variable
 order2=1;
-//  Variables to save data to local storage
-let key;
-let value;
+//variable for friend code doesnt brake
 let checks = 0;
 function Next2() {
     switch (order2) {
@@ -185,9 +183,9 @@ function Next2() {
     order2++
 }
 function getAnswer1() {
-    key= document.getElementById("q").innerHTML;
-    value = document.getElementById("ans12").innerHTML;
-    localStorage.setItem(key, value)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans12").innerHTML;
+    localStorage.setItem(Key, vValue)
     switch (order2) {
         case 8:
             if (localStorage.getItem(questions2[1])==answerday2box2[1]) {
@@ -322,9 +320,9 @@ function getAnswer1() {
     order2++
 }
 function getAnswer2() {
-    key= document.getElementById("q").innerHTML;
-    value = document.getElementById("ans22").innerHTML;
-    localStorage.setItem(key, value)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans22").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order2) {
         case 8:
             if (localStorage.getItem(questions2[1])==answerday2box2[1]) {
@@ -466,9 +464,9 @@ function getAnswer2() {
     order2++
 }
 function getAnswer3() {
-    key= document.getElementById("q").innerHTML;
-    value = document.getElementById("ans32").innerHTML;
-    localStorage.setItem(key, value)
+    Key= document.getElementById("q").innerHTML;
+    Value = document.getElementById("ans32").innerHTML;
+    localStorage.setItem(Key, Value)
     switch (order2) {
         case 8:
             if (localStorage.getItem(questions2[1])==answerday2box2[1]) {

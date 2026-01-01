@@ -1,6 +1,7 @@
 
 localStorage.clear();
-function Show() {
+// to remove the end screen
+function Remove() {
         document.getElementById("days").style.display = 'none';
         document.getElementById("maintext").style.display = 'none';
         document.getElementById("button").style.display = 'none';
@@ -13,22 +14,22 @@ function Show() {
 function ToDay2(){
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next2").style.display = 'block';
-    Show()
+    Remove()
 }
 function ToDay3() {
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next3").style.display = 'block';
-    Show()
+    Remove()
 }
 function ToDay4() {
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next4").style.display = 'block';
-    Show()
+    Remove()
 }
 function ToDay5() {
     document.getElementById("q").innerHTML ="You went to school from your "+localStorage.getItem(questions[3]).toLowerCase();;
     document.getElementById("next5").style.display = 'block';
-    Show()
+    Remove()
 }
 function OverView() {
     document.getElementById("button5").style.display = 'none';
@@ -118,11 +119,15 @@ function OverView() {
         }
     }
 }
+// Too show the end screan after every day so the code is smaller
 function EndScreen() {
-    document.getElementById("days").style.display = 'block';//
-    document.getElementById("maintext").style.display = 'block';//
-    document.getElementById("button").style.display = 'flex';//
-    document.getElementById("end").style.display = 'flex';//
-    document.getElementById("background").style.display = 'none';//
-    document.getElementById("q"). innerHTML= "";//
+    document.getElementById("days").style.display = 'block';
+    document.getElementById("maintext").style.display = 'block';
+    document.getElementById("button").style.display = 'flex';
+    document.getElementById("end").style.display = 'flex';
+    document.getElementById("background").style.display = 'none';
+    document.getElementById("q"). innerHTML= "";
 }
+//LocalStorage key and value variable
+let Key;
+let Value;
