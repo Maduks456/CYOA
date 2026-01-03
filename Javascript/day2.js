@@ -185,7 +185,7 @@ function Next2() {
 function getAnswer1() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans12").innerHTML;
-    localStorage.setItem(Key, vValue)
+    localStorage.setItem(Key, Value)
     switch (order2) {
         case 8:
             if (localStorage.getItem(questions2[1])==answerday2box2[1]) {
