@@ -1,6 +1,5 @@
-//order of this day
-let order5 = 1
-//questions/answers and variable for it
+
+//questions/answers
 const questions5 = [
     "You where thinking did I sleep well?",
     "How do you feel in class?",
@@ -33,8 +32,8 @@ const Answerday5box3= [
     "volleyball",
     ""
 ]
-qu5 =0
-//narrator text and array variable
+
+//narrator text
 const narrator5= [
     "You went to the first lesson it latvian",
     "You sat in you chair till the teacher gave you a thing to do",
@@ -48,104 +47,102 @@ const narrator5= [
     "You went home for the weekend",
     "You stayed in the dorms"
 ]
-n5 =0
-
 function Next5(){
-    switch (order5) {
+    switch (order) {
         case 1: case 6:
-            document.getElementById("q").innerHTML = questions5[qu5]
+            document.getElementById("q").innerHTML = questions5[qu]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-                if(Answerday5box1[qu5] != ""){
+                if(Answerday5box1[qu] != ""){
                     document.getElementById("ans15").style.display = 'block';
-                    document.getElementById("ans15").innerHTML = Answerday5box1[qu5];
+                    document.getElementById("ans15").innerHTML = Answerday5box1[qu];
                 }
-                if(Answerday5box2[qu5] != ""){
+                if(Answerday5box2[qu] != ""){
                     document.getElementById("ans25").style.display = 'block';
-                    document.getElementById("ans25").innerHTML = Answerday5box2[qu5];
+                    document.getElementById("ans25").innerHTML = Answerday5box2[qu];
                 }
-                if(Answerday5box3[qu5] != ""){
+                if(Answerday5box3[qu] != ""){
                     document.getElementById("ans35").style.display = 'block';
-                    document.getElementById("ans35").innerHTML = Answerday5box3[qu5];
+                    document.getElementById("ans35").innerHTML = Answerday5box3[qu];
                 }
-            qu5++
+            qu++
         break;
         case 3:
-            document.getElementById("q").innerHTML = questions5[qu5]
+            document.getElementById("q").innerHTML = questions5[qu]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-                if(Answerday5box1[qu5] != ""){
+                if(Answerday5box1[qu] != ""){
                     document.getElementById("ans15").style.display = 'block';
-                    document.getElementById("ans15").innerHTML = Answerday5box1[qu5];
+                    document.getElementById("ans15").innerHTML = Answerday5box1[qu];
                 }
-                if(Answerday5box2[qu5] != ""){
+                if(Answerday5box2[qu] != ""){
                     document.getElementById("ans25").style.display = 'block';
-                    document.getElementById("ans25").innerHTML = Answerday5box2[qu5];
+                    document.getElementById("ans25").innerHTML = Answerday5box2[qu];
                 }
                 if(localStorage.getItem(questions5[0])=="No"){
                     document.getElementById("ans35").style.display = 'block';
-                    document.getElementById("ans35").innerHTML = Answerday5box3[qu5];
+                    document.getElementById("ans35").innerHTML = Answerday5box3[qu];
                 }
-            qu5++
+            qu++
         break;
         case 5: case 8:
-            document.getElementById("q").innerHTML = narrator5[n5]
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
+            n++
         break;
         case 9:
-            document.getElementById("q").innerHTML = questions5[qu5]
+            document.getElementById("q").innerHTML = questions5[qu]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-                if(Answerday5box1[qu5] != ""){
+                if(Answerday5box1[qu] != ""){
                     document.getElementById("ans15").style.display = 'block';
-                    document.getElementById("ans15").innerHTML = Answerday5box1[qu5];
+                    document.getElementById("ans15").innerHTML = Answerday5box1[qu];
                 }
                 if(localStorage.getItem(questions[3]) =="School dorms"){
                     document.getElementById("ans25").style.display = 'block';
-                    document.getElementById("ans25").innerHTML = Answerday5box2[qu5];
+                    document.getElementById("ans25").innerHTML = Answerday5box2[qu];
                 }
-                 if(Answerday5box3[qu5] != ""){
+                 if(Answerday5box3[qu] != ""){
                     document.getElementById("ans35").style.display = 'block';
-                    document.getElementById("ans35").innerHTML = Answerday5box1[qu5];
+                    document.getElementById("ans35").innerHTML = Answerday5box1[qu];
                 }
-                qu5++
+                qu++
         break;
         case 12:
             if(localStorage.getItem(questions[3])=="Perents house"){
-                document.getElementById("q").innerHTML = narrator5[n5]
+                document.getElementById("q").innerHTML = narrator5[n]
                 document.getElementById("ans15").style.display = 'none';
                 document.getElementById("ans25").style.display = 'none';
                 document.getElementById("ans35").style.display = 'none';
-                order5==13
+                order==13
             }else{
-                document.getElementById("q").innerHTML = questions5[qu5]
+                document.getElementById("q").innerHTML = questions5[qu]
                 document.getElementById("ans15").style.display = 'none';
                 document.getElementById("ans25").style.display = 'none';
                 document.getElementById("ans35").style.display = 'none';
-                    if(Answerday5box1[qu5] != ""){
+                    if(Answerday5box1[qu] != ""){
                         document.getElementById("ans15").style.display = 'block';
-                        document.getElementById("ans15").innerHTML = Answerday5box1[qu5];
+                        document.getElementById("ans15").innerHTML = Answerday5box1[qu];
                     }
-                    if(Answerday5box2[qu5] != ""){
+                    if(Answerday5box2[qu] != ""){
                         document.getElementById("ans25").style.display = 'block';
-                        document.getElementById("ans25").innerHTML = Answerday5box2[qu5];
+                        document.getElementById("ans25").innerHTML = Answerday5box2[qu];
                     }
-                    if(Answerday5box3[qu5] != ""){
+                    if(Answerday5box3[qu] != ""){
                         document.getElementById("ans35").style.display = 'block';
-                        document.getElementById("ans35").innerHTML = Answerday5box3[qu5];
+                        document.getElementById("ans35").innerHTML = Answerday5box3[qu];
                     }
-                qu5++
+                qu++
             }
         break;
         case 14:
             EndScreen()
-            document.getElementById("button5").style.display = 'block';
+            document.getElementById("button").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("next5").style.display = 'none';
             document.getElementById("button4").style.display = 'none';
@@ -191,7 +188,7 @@ function Next5(){
             }
         break;
     }
-    switch (order5) {
+    switch (order) {
         case 3:
             document.getElementById('background').src='Photos/class.png'
             document.getElementById('background').style.width ="1200px"
@@ -203,64 +200,64 @@ function Next5(){
             document.getElementById('background').style.height ="580px"  
         break;
     }
-    order5++
+    order++
 }
 function get_answer1() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans15").innerHTML;
     localStorage.setItem(Key, Value)
-    switch (order5) {
+    switch (order) {
         case 2: case 13:
-            document.getElementById("q").innerHTML = narrator5[n5]
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
+            n++
         break;
         case 4: 
-            document.getElementById("q").innerHTML = narrator5[n5]
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5= n5+2
+            n= n+2
         break;
         case 7:
-            document.getElementById("q").innerHTML = narrator5[n5]
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5= n5+3
+            n= n+3
         break;
         case 10:
-            document.getElementById("q").innerHTML = questions5[qu5]
+            document.getElementById("q").innerHTML = questions5[qu]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-                if(Answerday5box1[qu5] != ""){
+                if(Answerday5box1[qu] != ""){
                     document.getElementById("ans15").style.display = 'block';
-                    document.getElementById("ans15").innerHTML = Answerday5box1[qu5];
+                    document.getElementById("ans15").innerHTML = Answerday5box1[qu];
                 }
-                if(Answerday5box2[qu5] != ""){
+                if(Answerday5box2[qu] != ""){
                     document.getElementById("ans25").style.display = 'block';
-                    document.getElementById("ans25").innerHTML = Answerday5box2[qu5];
+                    document.getElementById("ans25").innerHTML = Answerday5box2[qu];
                 }
-                if(Answerday5box3[qu5] != ""){
+                if(Answerday5box3[qu] != ""){
                     document.getElementById("ans35").style.display = 'block';
-                    document.getElementById("ans35").innerHTML = Answerday5box3[qu5];
+                    document.getElementById("ans35").innerHTML = Answerday5box3[qu];
                 }
-            qu5++
+            qu++
         break;
         case 11:
-            let start= narrator5[n5].slice(0,11)
-            let end= narrator5[n5].slice(11,31)
+            let start= narrator5[n].slice(0,11)
+            let end= narrator5[n].slice(11,31)
             document.getElementById("q").innerHTML = start+localStorage.getItem(questions5[4]).toLowerCase()+end
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
+            n++
         break;
     }
-    switch (order5) {
+    switch (order) {
         case 2:
             document.getElementById('background').src='Photos/hall_wall.png'
             document.getElementById('background').style.width ="1400px"
@@ -289,66 +286,66 @@ function get_answer1() {
             }
         break;
     }
-    order5++
+    order++
 }
 function get_answer2() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans25").innerHTML;
     localStorage.setItem(Key, Value)
-    switch (order5) {
+    switch (order) {
         case 2:
-            document.getElementById("q").innerHTML = narrator5[n5]
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
+            n++
         break;
         case 4: case 13:
-            n5++
-            document.getElementById("q").innerHTML = narrator5[n5]
+            n++
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
+            n++
         break;
         case 7:
-            n5++
-            document.getElementById("q").innerHTML = narrator5[n5]
+            n++
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5= n5+2
+            n= n+2
         break;
         case 10:
-            document.getElementById("q").innerHTML = questions5[qu5]
+            document.getElementById("q").innerHTML = questions5[qu]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-                if(Answerday5box1[qu5] != ""){
+                if(Answerday5box1[qu] != ""){
                     document.getElementById("ans15").style.display = 'block';
-                    document.getElementById("ans15").innerHTML = Answerday5box1[qu5];
+                    document.getElementById("ans15").innerHTML = Answerday5box1[qu];
                 }
-                if(Answerday5box2[qu5] != ""){
+                if(Answerday5box2[qu] != ""){
                     document.getElementById("ans25").style.display = 'block';
-                    document.getElementById("ans25").innerHTML = Answerday5box2[qu5];
+                    document.getElementById("ans25").innerHTML = Answerday5box2[qu];
                 }
-                if(Answerday5box3[qu5] != ""){
+                if(Answerday5box3[qu] != ""){
                     document.getElementById("ans35").style.display = 'block';
-                    document.getElementById("ans35").innerHTML = Answerday5box3[qu5];
+                    document.getElementById("ans35").innerHTML = Answerday5box3[qu];
                 }
-            qu5++
+            qu++
         break;
         case 11:
-            let start= narrator5[n5].slice(0,11)
-            let end= narrator5[n5].slice(11,31)
+            let start= narrator5[n].slice(0,11)
+            let end= narrator5[n].slice(11,31)
             document.getElementById("q").innerHTML = start+localStorage.getItem(questions5[4]).toLowerCase()+end
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
+            n++
         break;
     }
-    switch (order5) {
+    switch (order) {
         case 2:
             document.getElementById('background').src='Photos/hall_wall.png'
             document.getElementById('background').style.width ="1400px"
@@ -377,46 +374,46 @@ function get_answer2() {
             }
         break;
     }
-    order5++
+    order++
 }
 function get_answer3() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans35").innerHTML;
     localStorage.setItem(Key, Value)
-    switch (order5) {
+    switch (order) {
         case 2:
-            document.getElementById("q").innerHTML = narrator5[n5]
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
+            n++
         break;
         case 4:
-            n5=6
-            document.getElementById("q").innerHTML = narrator5[n5]
+            n=6
+            document.getElementById("q").innerHTML = narrator5[n]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
-            order5 = 7
-            qu5++
+            n++
+            order = 7
+            qu++
         break;
         case 11:
-            let start= narrator5[n5].slice(0,11)
-            let end= narrator5[n5].slice(11,31)
+            let start= narrator5[n].slice(0,11)
+            let end= narrator5[n].slice(11,31)
             document.getElementById("q").innerHTML = start+localStorage.getItem(questions5[4]).toLowerCase()+end
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n5++
+            n++
         break;
     }
-    switch (order5) {
+    switch (order) {
         case 2:
             document.getElementById('background').src='Photos/hall_wall.png'
             document.getElementById('background').style.width ="1400px"
             document.getElementById('background').style.height ="580px"
         break;
     }
-    order5++
+    order++
 }

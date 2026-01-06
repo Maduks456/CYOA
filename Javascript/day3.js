@@ -1,6 +1,5 @@
-//order of this day
-let order3 = 1;
-//questions/answers and variable for it
+
+//questions/answers
 const questions3 = [
     "Do you want to skip school?", 
     "He asks what should they do with there time",
@@ -33,8 +32,7 @@ const Answerday3box3 = [
     "",
     ""
 ];
-let qu3 = 0;
-//narrator text and array variable
+//narrator text 
 const narrator3 = [
     "Before going into the school the crazy classmate came up to you and asked",
     "You walked into the school",
@@ -50,38 +48,37 @@ const narrator3 = [
     "I became a teacher because i liked children and you are the future of us",
     "When I have free time I like gardening"
 ]
-let n3= 0;
 function Next3() {
-    switch (order3) {
+    switch (order) {
         case 1:
             if(localStorage.getItem(questions2[3])== "Use your phone"){
-                document.getElementById("q").innerHTML= narrator3[n3]
+                document.getElementById("q").innerHTML= narrator3[n]
             }else{
-                n3++
-                document.getElementById("q").innerHTML= narrator3[n3]
-                order3=7
-                qu3 = 3
+                n++
+                document.getElementById("q").innerHTML= narrator3[n]
+                order=7
+                qu = 3
             }
-            n3++
+            n++
         break;
         case 2: case 10: case 5: case 17:
-            document.getElementById("q").innerHTML = questions3[qu3]
+            document.getElementById("q").innerHTML = questions3[qu]
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-                if(Answerday3box1[qu3] != ""){
+                if(Answerday3box1[qu] != ""){
                     document.getElementById("ans13").style.display = 'block';
-                    document.getElementById("ans13").innerHTML = Answerday3box1[qu3];
+                    document.getElementById("ans13").innerHTML = Answerday3box1[qu];
                 }
-                if(Answerday3box2[qu3] != ""){
+                if(Answerday3box2[qu] != ""){
                     document.getElementById("ans23").style.display = 'block';
-                    document.getElementById("ans23").innerHTML = Answerday3box2[qu3];
+                    document.getElementById("ans23").innerHTML = Answerday3box2[qu];
                 }
-                if(Answerday3box3[qu3] != ""){
+                if(Answerday3box3[qu] != ""){
                     document.getElementById("ans33").style.display = 'block';
-                    document.getElementById("ans33").innerHTML = Answerday3box3[qu3];
+                    document.getElementById("ans33").innerHTML = Answerday3box3[qu];
                 }
-            qu3++
+            qu++
         break;
         case 7:
             //end of the day for skiping school
@@ -105,40 +102,40 @@ function Next3() {
             }
         break;
         case 8: case 9: case 13: case 14:
-            document.getElementById("q").innerHTML = narrator3[n3]
-            n3++
+            document.getElementById("q").innerHTML = narrator3[n]
+            n++
         break;
         case 12:
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
             if(localStorage.getItem(questions3[3])== Answerday3box3[3]){
-                document.getElementById("q").innerHTML = narrator3[n3]
-                n3++
+                document.getElementById("q").innerHTML = narrator3[n]
+                n++
             }else{
-                n3++
-                document.getElementById("q").innerHTML = narrator3[n3]
+                n++
+                document.getElementById("q").innerHTML = narrator3[n]
             }
-            n3++
+            n++
         break;
         case 15:
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            document.getElementById("q").innerHTML = questions3[qu3]
-            if(Answerday3box1[qu3] != ""){
+            document.getElementById("q").innerHTML = questions3[qu]
+            if(Answerday3box1[qu] != ""){
                 document.getElementById("ans13").style.display = 'block';
-                document.getElementById("ans13").innerHTML = Answerday3box1[qu3];
+                document.getElementById("ans13").innerHTML = Answerday3box1[qu];
             }
-            if(Answerday3box2[qu3] != ""){
+            if(Answerday3box2[qu] != ""){
                 document.getElementById("ans23").style.display = 'block';
-                document.getElementById("ans23").innerHTML = Answerday3box2[qu3];
+                document.getElementById("ans23").innerHTML = Answerday3box2[qu];
             }
-            if(Answerday3box3[qu3] != ""){
+            if(Answerday3box3[qu] != ""){
                 document.getElementById("ans33").style.display = 'block';
-                document.getElementById("ans33").innerHTML = Answerday3box3[qu3];
+                document.getElementById("ans33").innerHTML = Answerday3box3[qu];
             }
-            qu3++
+            qu++
         break;
         case 19:
             document.getElementById("ans12").style.display = 'none';
@@ -170,7 +167,7 @@ function Next3() {
             }
         break;
     }
-    switch (order3) {
+    switch (order) {
         case 7:
             if(localStorage.getItem(questions2[3])!= "Use your phone"){
                 document.getElementById('background').src='Photos/hall.png'
@@ -200,33 +197,33 @@ function Next3() {
             document.getElementById('background').style.height ="600px"
         break;
     } 
-    console.log(order3);
-    order3++
+    console.log(order);
+    order++
 }
 function getanswer1() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans13").innerHTML;
     localStorage.setItem(Key, Value)
     
-    switch (order3) {
+    switch (order) {
         case 3:
-            document.getElementById("q").innerHTML = questions3[qu3]
+            document.getElementById("q").innerHTML = questions3[qu]
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            if(Answerday3box1[qu3] != ""){
+            if(Answerday3box1[qu] != ""){
                 document.getElementById("ans13").style.display = 'block';
-                document.getElementById("ans13").innerHTML = Answerday3box1[qu3];
+                document.getElementById("ans13").innerHTML = Answerday3box1[qu];
             }
-            if(Answerday3box2[qu3] != ""){
+            if(Answerday3box2[qu] != ""){
                 document.getElementById("ans23").style.display = 'block';
-                document.getElementById("ans23").innerHTML = Answerday3box2[qu3];
+                document.getElementById("ans23").innerHTML = Answerday3box2[qu];
             }
-            if(Answerday3box3[qu3] != ""){
+            if(Answerday3box3[qu] != ""){
                 document.getElementById("ans33").style.display = 'block';
-                document.getElementById("ans33").innerHTML = Answerday3box3[qu3];
+                document.getElementById("ans33").innerHTML = Answerday3box3[qu];
             }
-            qu3++
+            qu++
         break;
         case 4:
             document.getElementById("ans13").style.display = 'none';
@@ -244,49 +241,49 @@ function getanswer1() {
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            n3++
-            document.getElementById("q").innerHTML= "The teacher didnt allow you to work alone so she put you with "+Answerday3box2[3]+". "+narrator3[n3]
-            n3++
+            n++
+            document.getElementById("q").innerHTML= "The teacher didnt allow you to work alone so she put you with "+Answerday3box2[3]+". "+narrator3[n]
+            n++
         break;
         case 16:
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            document.getElementById("q").innerHTML= narrator3[n3]
-            order3=order3+2
-            n3++
+            document.getElementById("q").innerHTML= narrator3[n]
+            order=order+2
+            n++
         break;
         case 18:
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
             document.getElementById("q").innerHTML= narrator3[10]
-            n3++
+            n++
         break;
     }
-    switch (order3) {
+    switch (order) {
         case 4: 
             document.getElementById('background').src='Photos/wont.png'
             document.getElementById('background').style.width ="1300px"
             document.getElementById('background').style.height ="560px"
         break;
     }
-    console.log(order3);
-    order3++
+    console.log(order);
+    order++
 }
 function getanswer2() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans23").innerHTML;
     localStorage.setItem(Key, Value)
-    switch (order3) {
+    switch (order) {
         case 3:
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator3[n3]
-            n3++
-            order3=7
-            qu3 = 3
+            document.getElementById("q").innerHTML = narrator3[n]
+            n++
+            order=7
+            qu = 3
         break;
         case 4:
             document.getElementById("ans13").style.display = 'none';
@@ -304,27 +301,27 @@ function getanswer2() {
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            n3++
-            document.getElementById("q").innerHTML = narrator3[n3]
-            n3++
+            n++
+            document.getElementById("q").innerHTML = narrator3[n]
+            n++
         break;
         case 16:
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            n3++
-            document.getElementById("q").innerHTML= narrator3[n3] 
-            n3++
+            n++
+            document.getElementById("q").innerHTML= narrator3[n] 
+            n++
         break;
         case 18:
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            document.getElementById("q").innerHTML= narrator3[n3]
-            n3++
+            document.getElementById("q").innerHTML= narrator3[n]
+            n++
         break;
     }
-    switch (order3) {
+    switch (order) {
         case 4: 
             document.getElementById('background').src='Photos/wont.png'
             document.getElementById('background').style.width ="1300px"
@@ -338,14 +335,14 @@ function getanswer2() {
             }
         break;
     }
-    console.log(order3);
-    order3++
+    console.log(order);
+    order++
 }
 function getanswer3() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans33").innerHTML;
     localStorage.setItem(Key, Value)
-    switch (order3) {
+    switch (order) {
         case 4:
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
@@ -356,18 +353,18 @@ function getanswer3() {
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator3[n3]
-            n3++
-            n3++
+            document.getElementById("q").innerHTML = narrator3[n]
+            n++
+            n++
         break;
     }
-    switch (order3) {
+    switch (order) {
         case 4: 
             document.getElementById('background').src='Photos/wont.png'
             document.getElementById('background').style.width ="1300px"
             document.getElementById('background').style.height ="560px"
         break;
     }
-    console.log(order3);
-    order3++
+    console.log(order);
+    order++
 }

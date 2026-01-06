@@ -61,7 +61,7 @@
 // order of the  text/questions
 let order =1;
 // Text array number
-let text = 1;
+let n=1;
 //Question array number
 let qu= 0;
 //Stundent Array number
@@ -75,15 +75,15 @@ let St1question;
 let St2question;
 let Narratortext1;
 let Narratortext2;
-function FrText(){
+function Next(){
     switch (order) {
         case 1: case 2: case 3: case 4:  case 13: case 16:
-            document.getElementById("q").innerHTML = text1[text];
+            document.getElementById("q").innerHTML = text1[n];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
             document.getElementById("ans4").style.display = 'none';
-            text++
+            n++
         break;
         case 5: case 7: case 9: case 17: 
             document.getElementById("ans1").style.display = 'none';
@@ -154,23 +154,18 @@ function FrText(){
                 }
                 qu++
             }else{
-                document.getElementById("q").innerHTML = text1[text];
+                document.getElementById("q").innerHTML = text1[n];
                 document.getElementById("ans1").style.display = 'none';
                 document.getElementById("ans2").style.display = 'none';
                 document.getElementById("ans3").style.display = 'none';
                 document.getElementById("ans4").style.display = 'none';
-                text= text+2; 
+                n= n+2; 
             }
         break;
         case 20:
-            document.getElementById("days").style.display = 'block';
-            document.getElementById("maintext").style.display = 'block';
+            EndScreen()
             document.getElementById("button1").style.display = 'block';
-            document.getElementById("button").style.display = 'flex';
-            document.getElementById("end").style.display = 'flex';
             document.getElementById("next").style.display = 'none';
-            document.getElementById("background").style.display = 'none';
-            document.getElementById("q"). innerHTML= "";
             document.getElementById("days"). innerHTML= "Day 1";
                 document.getElementById("maintext").innerHTML = "You live in the school dorms, "
                 //Friends
@@ -213,16 +208,13 @@ function FrText(){
             document.getElementById("button1").style.display = 'block';
             document.getElementById("next").style.display = 'none';
             document.getElementById("days"). innerHTML= "Day 1";
-                 if (localStorage.getItem(questions[3])=="Perents house") {
                     document.getElementById("maintext").innerHTML = "You live with your perents, "
-                }
-                if (localStorage.getItem(questions[3])=="Perents house") {
+
                     if (localStorage.getItem(questions[4])=="Dad") {
                         document.getElementById("maintext").innerHTML += "you told your dad about your first day, " 
                     }else{
                         document.getElementById("maintext").innerHTML += "you told your mom about your first day, " 
                     }
-                }
                 //Friends
                 if (localStorage.getItem(St1question)==StuAnswerbox1[0]&&localStorage.getItem(St2question)==StuAnswerbox1[0]) {
                     document.getElementById("maintext").innerHTML += "you made 2 friends, " 
@@ -294,12 +286,12 @@ function GetAnswer1(){
     localStorage.setItem(Key, Value)
     switch (order) {
         case 6: case 8: case 10:
-            document.getElementById("q").innerHTML = text1[text];
+            document.getElementById("q").innerHTML = text1[n];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
             document.getElementById("ans4").style.display = 'none';
-            text++
+            n++
             break;
         case 12: case 15:
             document.getElementById("q").innerHTML = Student1[st];
@@ -314,16 +306,16 @@ function GetAnswer1(){
             document.getElementById("ans4").style.display = 'none';
             switch (change) {
                 case 1:
-                    textStart = text1[text];
+                    textStart = text1[n];
                     word = localStorage.getItem(questions[3]).toLowerCase();
                     Narratortext1 = textStart+word;
                     document.getElementById("q").innerHTML = Narratortext1;
-                    text++
+                    n++
                 break;
                 case 2:
-                    text++
-                    textStart = text1[text].slice(0,14);
-                    textEnd = text1[text].slice(15,53);
+                    n++
+                    textStart = text1[n].slice(0,14);
+                    textEnd = text1[n].slice(15,53);
                     word = localStorage.getItem(questions[4]).toLowerCase();
                     Narratortext2 = textStart+word+textEnd;
                     document.getElementById("q").innerHTML = Narratortext2;
@@ -358,12 +350,12 @@ function GetAnswer2(){
     localStorage.setItem(Key, Value)
     switch (order) {
         case 6: case 8: case 10:
-            document.getElementById("q").innerHTML = text1[text];
+            document.getElementById("q").innerHTML = text1[n];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
             document.getElementById("ans4").style.display = 'none';
-            text++
+            n++
             break;
         case 12: case 15:
             st++
@@ -379,16 +371,16 @@ function GetAnswer2(){
             document.getElementById("ans4").style.display = 'none';
             switch (change) {
                 case 1:
-                    textStart = text1[text].slice(0,22);
+                    textStart = text1[n].slice(0,22);
                     word = localStorage.getItem(questions[3]).toLowerCase();
                     Narratortext1 = textStart+word;
                     document.getElementById("q").innerHTML = Narratortext1;
-                    text++
+                    n++
                 break;
                 case 2:
-                    text++
-                    textStart = text1[text].slice(0,14);
-                    textEnd = text1[text].slice(15,53);
+                    n++
+                    textStart = text1[n].slice(0,14);
+                    textEnd = text1[n].slice(15,53);
                     word = localStorage.getItem(questions[4]).toLowerCase();
                     Narratortext2 = textStart+word+textEnd;
                     document.getElementById("q").innerHTML = Narratortext2;
@@ -423,12 +415,12 @@ function GetAnswer3(){
     localStorage.setItem(Key, Value)
     switch (order) {
         case 6: case 8: case 10:
-            document.getElementById("q").innerHTML = text1[text];
+            document.getElementById("q").innerHTML = text1[n];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
             document.getElementById("ans4").style.display = 'none';
-            text++
+            n++
         break;
     }
     switch (order) {
@@ -446,12 +438,12 @@ function GetAnswer4(){
     localStorage.setItem(Key, Value)
     switch (order) {
         case 6: case 8:
-            document.getElementById("q").innerHTML = text1[text];
+            document.getElementById("q").innerHTML = text1[n];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
             document.getElementById("ans4").style.display = 'none';
-            text++
+            n++
         break;       
     }
     order++

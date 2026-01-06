@@ -1,6 +1,5 @@
-//order of this day
-let order4 = 1;
-//questions/answers and variable for it
+
+//questions/answers
 const questions4= [
     "Which friend do you want to spend time with?",
     "The teacher asks us how much do we know?",
@@ -28,8 +27,7 @@ const Answerday4box4= [
     "3. friend",
     ""
 ]
-let qu4 = 0
-//narrator text and array variable
+//narrator text
 const narrator4 = [
     "You spent time with you friend before class",
     "you waited till the class started",
@@ -48,70 +46,68 @@ const narrator4 = [
     "You and the deskmate did the research without any problom",
     "You scorch yor arm with the fire" 
 ]
-let n4 =0
-
 function Next4(){
-    switch (order4) {
+    switch (order) {
         case 1:
-            document.getElementById("q").innerHTML = questions4[qu4]
+            document.getElementById("q").innerHTML = questions4[qu]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-                if(Answerday4box1[qu4] != ""){
+                if(Answerday4box1[qu] != ""){
                     document.getElementById("ans14").style.display = 'block';
-                    document.getElementById("ans14").innerHTML = Answerday4box1[qu4];
+                    document.getElementById("ans14").innerHTML = Answerday4box1[qu];
                 }
                 if(localStorage.getItem(St1question) == "Sure"){
                     document.getElementById("ans24").style.display = 'block';
-                    document.getElementById("ans24").innerHTML = Answerday4box2[qu4];
+                    document.getElementById("ans24").innerHTML = Answerday4box2[qu];
                 }
                 if(localStorage.getItem(St2question) == "Sure"){
                     document.getElementById("ans34").style.display = 'block';
-                    document.getElementById("ans34").innerHTML = Answerday4box3[qu4];
+                    document.getElementById("ans34").innerHTML = Answerday4box3[qu];
                 }
                 if(localStorage.getItem(questions2[2])== "Tall one" && guess==2 || localStorage.getItem(questions2[2])== "Emo one" && guess==2){
                     document.getElementById("ans44").style.display = 'block';
-                    document.getElementById("ans44").innerHTML = Answerday4box4[qu4];
+                    document.getElementById("ans44").innerHTML = Answerday4box4[qu];
                 }
 
-            qu4++
+            qu++
         break;
         case 3: case 7: case 13: case 14: case 15:
-            document.getElementById("q").innerHTML = narrator4[n4]
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4++
+            n++
         break;
         case 4: case 8:
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            document.getElementById("q").innerHTML = questions4[qu4];
-                if(Answerbox1[qu4] != ""){
+            document.getElementById("q").innerHTML = questions4[qu];
+                if(Answerbox1[qu] != ""){
                     document.getElementById("ans14").style.display = 'block';
-                    document.getElementById("ans14").innerHTML = Answerday4box1[qu4];
+                    document.getElementById("ans14").innerHTML = Answerday4box1[qu];
                 }
-                if(Answerbox2[qu4] != ""){
+                if(Answerbox2[qu] != ""){
                     document.getElementById("ans24").style.display = 'block';
-                    document.getElementById("ans24").innerHTML = Answerday4box2[qu4];
+                    document.getElementById("ans24").innerHTML = Answerday4box2[qu];
                 }
-                if(Answerbox3[qu4] != ""){
+                if(Answerbox3[qu] != ""){
                     document.getElementById("ans34").style.display = 'block';
-                    document.getElementById("ans34").innerHTML = Answerday4box3[qu4];
+                    document.getElementById("ans34").innerHTML = Answerday4box3[qu];
                 }
-            qu4++
+            qu++
         break;
         case 10:
-            document.getElementById("q").innerHTML = narrator4[n4]
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4++
+            n++
             if(localStorage.getItem(questions4[1])=="Nothing"){
                 localStorage.setItem(questions4[1],"Not alot")
             }else if(localStorage.getItem(questions4[1])=="Not alot") {
@@ -122,29 +118,29 @@ function Next4(){
             if (localStorage.getItem(questions4[1])== "Alot") {
                 document.getElementById("q").innerHTML = narrator4[5]
             }else{
-                document.getElementById("q").innerHTML = narrator4[n4]
+                document.getElementById("q").innerHTML = narrator4[n]
             }
-            n4++
+            n++
         break;
         case 12:
             if (localStorage.getItem(questions4[1])== "Alot") {
-                document.getElementById("q").innerHTML = narrator4[n4]
-                n4++
+                document.getElementById("q").innerHTML = narrator4[n]
+                n++
             }else{
-                n4++
-                document.getElementById("q").innerHTML = narrator4[n4]
+                n++
+                document.getElementById("q").innerHTML = narrator4[n]
             }
-            n4++
+            n++
         break;
         case 16:
             if(localStorage.getItem(questions2[5])==answerday2box1[5]){
-                document.getElementById("q").innerHTML = narrator4[n4]
-                n4++
+                document.getElementById("q").innerHTML = narrator4[n]
+                n++
             }else{
-                n4++
-                document.getElementById("q").innerHTML = narrator4[n4]
+                n++
+                document.getElementById("q").innerHTML = narrator4[n]
             }
-            n4++
+            n++
         break;
         case 17:
             document.getElementById("ans12").style.display = 'none';
@@ -158,7 +154,7 @@ function Next4(){
         break;
         case 18:
             EndScreen()
-            document.getElementById("button4").style.display = 'block';
+            document.getElementById("button").style.display = 'block';
             document.getElementById("button").style.display = 'flex';
             document.getElementById("next4").style.display = 'none';
             document.getElementById("button3").style.display = 'none';
@@ -192,7 +188,7 @@ function Next4(){
                 }
         break;
     }
-    switch (order4) {
+    switch (order) {
         case 1:
             document.getElementById('background').src='Photos/hall.png'
             document.getElementById('background').style.width ="1400px"
@@ -221,53 +217,53 @@ function Next4(){
             }
         break;
     }
-    order4++
+    order++
 }
 function Getanswer1() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans14").innerHTML;
     localStorage.setItem(Key, Value)
-    switch (order4) {
+    switch (order) {
         case 2:
-            n4++
-            document.getElementById("q").innerHTML = narrator4[n4]
+            n++
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4++
+            n++
         break;
         case 5:
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            document.getElementById("q").innerHTML = questions4[qu4];
-                if(Answerbox1[qu4] != ""){
+            document.getElementById("q").innerHTML = questions4[qu];
+                if(Answerbox1[qu] != ""){
                     document.getElementById("ans14").style.display = 'block';
-                    document.getElementById("ans14").innerHTML = Answerday4box1[qu4];
+                    document.getElementById("ans14").innerHTML = Answerday4box1[qu];
                 }
-                if(Answerbox2[qu4] != ""){
+                if(Answerbox2[qu] != ""){
                     document.getElementById("ans24").style.display = 'block';
-                    document.getElementById("ans24").innerHTML = Answerday4box2[qu4];
+                    document.getElementById("ans24").innerHTML = Answerday4box2[qu];
                 }
-                if(Answerbox3[qu4] != ""){
+                if(Answerbox3[qu] != ""){
                     document.getElementById("ans34").style.display = 'block';
-                    document.getElementById("ans34").innerHTML = Answerday4box3[qu4];
+                    document.getElementById("ans34").innerHTML = Answerday4box3[qu];
                 }
-                if(Answerbox4[qu4] != ""){ 
+                if(Answerbox4[qu] != ""){ 
                     document.getElementById("ans44").style.display = 'block';
-                    document.getElementById("ans44").innerHTML = Answerday4box4[qu4];
+                    document.getElementById("ans44").innerHTML = Answerday4box4[qu];
                 }
-            qu4++
+            qu++
         break;
         case 6:
-            document.getElementById("q").innerHTML = narrator4[n4]
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4++
+            n++
         break;
         case 9:
             document.getElementById("ans14").style.display = 'none';
@@ -275,142 +271,142 @@ function Getanswer1() {
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
             if (localStorage.getItem(questions4[1])=="Alot"){
-                document.getElementById("q").innerHTML = narrator4[n4]
-                n4=n4+3
-                order4=11
+                document.getElementById("q").innerHTML = narrator4[n]
+                n=n+3
+                order=11
             }else{
-                n4++
-                document.getElementById("q").innerHTML = narrator4[n4]
+                n++
+                document.getElementById("q").innerHTML = narrator4[n]
             }
-            n4++
+            n++
         break;
     }
-    order4++
+    order++
 }
 function Getanswer2() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans24").innerHTML;
     localStorage.setItem(Key, Value)
-    switch (order4) {
+    switch (order) {
         case 2:
-            document.getElementById("q").innerHTML = narrator4[n4]
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4=n4+2
+            n=n+2
         break;
         case 5:
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            document.getElementById("q").innerHTML = questions4[qu4];
-                if(Answerbox1[qu4] != ""){
+            document.getElementById("q").innerHTML = questions4[qu];
+                if(Answerbox1[qu] != ""){
                     document.getElementById("ans14").style.display = 'block';
-                    document.getElementById("ans14").innerHTML = Answerday4box1[qu4];
+                    document.getElementById("ans14").innerHTML = Answerday4box1[qu];
                 }
-                if(Answerbox2[qu4] != ""){
+                if(Answerbox2[qu] != ""){
                     document.getElementById("ans24").style.display = 'block';
-                    document.getElementById("ans24").innerHTML = Answerday4box2[qu4];
+                    document.getElementById("ans24").innerHTML = Answerday4box2[qu];
                 }
-                if(Answerbox3[qu4] != ""){
+                if(Answerbox3[qu] != ""){
                     document.getElementById("ans34").style.display = 'block';
-                    document.getElementById("ans34").innerHTML = Answerday4box3[qu4];
+                    document.getElementById("ans34").innerHTML = Answerday4box3[qu];
                 }
-                if(Answerbox4[qu4] != ""){ 
+                if(Answerbox4[qu] != ""){ 
                     document.getElementById("ans44").style.display = 'block';
-                    document.getElementById("ans44").innerHTML = Answerday4box4[qu4];
+                    document.getElementById("ans44").innerHTML = Answerday4box4[qu];
                 }
-            qu4++
+            qu++
         break;
         case 6:
-            document.getElementById("q").innerHTML = narrator4[n4]
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4++
+            n++
         break;
         case 9:
-            n4 = n4+2
-            document.getElementById("q").innerHTML = narrator4[n4]
+            n = n+2
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4++
+            n++
             if(localStorage.getItem(questions4[1])=="Nothing"){
                 localStorage.setItem(questions4[1],"Not alot")
             }else if(localStorage.getItem(questions4[1])=="Not alot") {
                 localStorage.setItem(questions4[1],"Alot")
             } 
-            order4++
+            order++
         break;
     }
-    order4++
+    order++
 }
 function Getanswer3() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans34").innerHTML;
     localStorage.setItem(Key, Value)
-    switch (order4) {
+    switch (order) {
         case 2:
-            document.getElementById("q").innerHTML = narrator4[n4]
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4=n4+2
+            n=n+2
         break;
         case 5:
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            document.getElementById("q").innerHTML = questions4[qu4];
-                if(Answerbox1[qu4] != ""){
+            document.getElementById("q").innerHTML = questions4[qu];
+                if(Answerbox1[qu] != ""){
                     document.getElementById("ans14").style.display = 'block';
-                    document.getElementById("ans14").innerHTML = Answerday4box1[qu4];
+                    document.getElementById("ans14").innerHTML = Answerday4box1[qu];
                 }
-                if(Answerbox2[qu4] != ""){
+                if(Answerbox2[qu] != ""){
                     document.getElementById("ans24").style.display = 'block';
-                    document.getElementById("ans24").innerHTML = Answerday4box2[qu4];
+                    document.getElementById("ans24").innerHTML = Answerday4box2[qu];
                 }
-                if(Answerbox3[qu4] != ""){
+                if(Answerbox3[qu] != ""){
                     document.getElementById("ans34").style.display = 'block';
-                    document.getElementById("ans34").innerHTML = Answerday4box3[qu4];
+                    document.getElementById("ans34").innerHTML = Answerday4box3[qu];
                 }
-                if(Answerbox4[qu4] != ""){ 
+                if(Answerbox4[qu] != ""){ 
                     document.getElementById("ans44").style.display = 'block';
-                    document.getElementById("ans44").innerHTML = Answerday4box4[qu4];
+                    document.getElementById("ans44").innerHTML = Answerday4box4[qu];
                 }
-            qu4++
+            qu++
         break;
         case 6:
-            document.getElementById("q").innerHTML = narrator4[n4]
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4++
+            n++
         break;
     }
-    order4++ 
+    order++ 
 }
 function Getanswer4() {
     Key= document.getElementById("q").innerHTML;
     Value = document.getElementById("ans44").innerHTML;
     localStorage.setItem(Key, Value)
-        switch (order4) {
+        switch (order) {
         case 2:
-            document.getElementById("q").innerHTML = narrator4[n4]
+            document.getElementById("q").innerHTML = narrator4[n]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n4=n4+2
+            n=n+2
         break;
     }
-    order4++
+    order++
 }
