@@ -171,30 +171,20 @@ function Next3() {
         case 7:
             if(localStorage.getItem(questions2[3])!= "Use your phone"){
                 document.getElementById('background').src='Photos/hall.png'
-                document.getElementById('background').style.width ="1400px"
-                document.getElementById('background').style.height ="580px"  
             }
         break;
         case 5: case 19:
             if(localStorage.getItem(questions[3])== Answerbox1[3]){
                 document.getElementById('background').src='Photos/house.png'
-                document.getElementById('background').style.width ="1300px"
-                document.getElementById('background').style.height ="550px"
             }else{
                 document.getElementById('background').src='Photos/Dorms.png'
-                document.getElementById('background').style.width ="1400px"
-                document.getElementById('background').style.height ="600px"
             }
         break;
         case 8: case 13:
             document.getElementById('background').src='Photos/hall_wall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"
         break;
         case 9: case 14:
             document.getElementById('background').src='Photos/class.png'
-            document.getElementById('background').style.width ="1200px"
-            document.getElementById('background').style.height ="600px"
         break;
     } 
     console.log(order);
@@ -264,8 +254,6 @@ function getanswer1() {
     switch (order) {
         case 4: 
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
     }
     console.log(order);
@@ -324,14 +312,10 @@ function getanswer2() {
     switch (order) {
         case 4: 
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
         case 7:
             if(localStorage.getItem(questions3[0])== "No"){
                 document.getElementById('background').src='Photos/hall.png'
-                document.getElementById('background').style.width ="1400px"
-                document.getElementById('background').style.height ="580px"  
             }
         break;
     }
@@ -361,8 +345,6 @@ function getanswer3() {
     switch (order) {
         case 4: 
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
     }
     console.log(order);

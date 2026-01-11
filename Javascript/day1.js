@@ -16,7 +16,7 @@
       const Answerbox2 = [
         "Anime",
         "Spend time with friends",
-        "I have traveled to 2 diffrent countrys", 
+        "I traveled to 2 countrys", 
         "School dorms",
         "Mom"
         ];
@@ -198,7 +198,7 @@ function Next(){
                 if (localStorage.getItem(questions[2])==Answerbox1[2]) {
                     document.getElementById("maintext").innerHTML += "that you know 4 diffrent languages." 
                 }else if(localStorage.getItem(questions[2])==Answerbox2[2]){
-                    document.getElementById("maintext").innerHTML += "that you have traveled to 2 diffrent countrys."
+                    document.getElementById("maintext").innerHTML += "that you have traveled to 2 countrys."
                 }else{
                     document.getElementById("maintext").innerHTML += "that you have learnd to drive a car."
                 }
@@ -245,7 +245,7 @@ function Next(){
                 if (localStorage.getItem(questions[2])==Answerbox1[2]) {
                     document.getElementById("maintext").innerHTML += "that you know 4 diffrent languages." 
                 }else if(localStorage.getItem(questions[2])==Answerbox2[2]){
-                    document.getElementById("maintext").innerHTML += "that you have traveled to 2 diffrent countrys."
+                    document.getElementById("maintext").innerHTML += "that you have traveled to 2 countrys."
                 }else{
                     document.getElementById("maintext").innerHTML += "that you have learnd to drive a car."
                 }
@@ -254,28 +254,18 @@ function Next(){
     switch (order) {
         case 1:
             document.getElementById('background').src='Photos/hall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"
         break;
         case 2:
             document.getElementById('background').src='Photos/hall_wall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"
         break;
         case 3:
             document.getElementById('background').src='Photos/class.png'
-            document.getElementById('background').style.width ="1200px"
-            document.getElementById('background').style.height ="600px"
         break;
         case 14:
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
         case 13: case 16:
             document.getElementById('background').src='Photos/out.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="550px"
         break;
     }
     order++
@@ -327,18 +317,12 @@ function GetAnswer1(){
     switch (order) {
         case 10: 
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
         case 18:
             if(localStorage.getItem(questions[3])== Answerbox1[3]){
                 document.getElementById('background').src='Photos/house.png'
-                document.getElementById('background').style.width ="1300px"
-                document.getElementById('background').style.height ="550px"
             }else{
                 document.getElementById('background').src='Photos/Dorms.png'
-                document.getElementById('background').style.width ="1400px"
-                document.getElementById('background').style.height ="600px"
             }
         break;
     }
@@ -392,18 +376,12 @@ function GetAnswer2(){
     switch (order) {
         case 10: 
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
         case 18:
             if(localStorage.getItem(questions[3])== Answerbox1[3]){
                 document.getElementById('background').src='Photos/house.png'
-                document.getElementById('background').style.width ="1300px"
-                document.getElementById('background').style.height ="550px"
             }else{
                 document.getElementById('background').src='Photos/Dorms.png'
-                document.getElementById('background').style.width ="1400px"
-                document.getElementById('background').style.height ="600px"
             }
         break;
     }
@@ -426,8 +404,6 @@ function GetAnswer3(){
     switch (order) {
         case 10: 
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
     }
     order++

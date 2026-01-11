@@ -191,29 +191,18 @@ function Next4(){
     switch (order) {
         case 1:
             document.getElementById('background').src='Photos/hall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"  
         break;
         case 3: case 13:
             document.getElementById('background').src='Photos/hall_wall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"
         break;
         case 4: case 14:
             document.getElementById('background').src='Photos/class.png'
-            document.getElementById('background').style.width ="1200px"
-            document.getElementById('background').style.height ="600px"
         break;
         case 17:
             if(localStorage.getItem(questions[3])== Answerbox1[3]){
                 document.getElementById('background').src='Photos/house.png'
-                document.getElementById('background').style.width ="1300px"
-                document.getElementById('background').style.height ="550px"
-    
             }else{
                 document.getElementById('background').src='Photos/Dorms.png'
-                document.getElementById('background').style.width ="1400px"
-                document.getElementById('background').style.height ="600px"
             }
         break;
     }

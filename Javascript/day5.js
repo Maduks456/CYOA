@@ -191,13 +191,9 @@ function Next5(){
     switch (order) {
         case 3:
             document.getElementById('background').src='Photos/class.png'
-            document.getElementById('background').style.width ="1200px"
-            document.getElementById('background').style.height ="600px"
         break;
         case 8: case 12:
             document.getElementById('background').src='Photos/hall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"  
         break;
     }
     order++
@@ -260,28 +256,18 @@ function get_answer1() {
     switch (order) {
         case 2:
             document.getElementById('background').src='Photos/hall_wall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"
         break;
         case 10:
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
         case 13:
             if(localStorage.getItem(questions[3])== Answerbox1[3]){
                 document.getElementById('background').src='Photos/house.png'
-                document.getElementById('background').style.width ="1300px"
-                document.getElementById('background').style.height ="550px"
             }else{
                 if (localStorage.getItem(questions5[5])== Answerday5box1[5]){
                     document.getElementById('background').src='Photos/house.png'
-                    document.getElementById('background').style.width ="1300px"
-                    document.getElementById('background').style.height ="550px"
                 } else {
                     document.getElementById('background').src='Photos/Dorms.png'
-                    document.getElementById('background').style.width ="1400px"
-                    document.getElementById('background').style.height ="600px"
                 }
             }
         break;
@@ -348,28 +334,18 @@ function get_answer2() {
     switch (order) {
         case 2:
             document.getElementById('background').src='Photos/hall_wall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"
         break;
         case 10:
             document.getElementById('background').src='Photos/wont.png'
-            document.getElementById('background').style.width ="1300px"
-            document.getElementById('background').style.height ="560px"
         break;
         case 13:
             if(localStorage.getItem(questions[3])== Answerbox1[3]){
                 document.getElementById('background').src='Photos/house.png'
-                document.getElementById('background').style.width ="1300px"
-                document.getElementById('background').style.height ="550px"
             }else{
                 if (localStorage.getItem(questions5[5])== Answerday5box1[5]){
                     document.getElementById('background').src='Photos/house.png'
-                    document.getElementById('background').style.width ="1300px"
-                    document.getElementById('background').style.height ="550px"
                 } else {
                     document.getElementById('background').src='Photos/Dorms.png'
-                    document.getElementById('background').style.width ="1400px"
-                    document.getElementById('background').style.height ="600px"
                 }
             }
         break;
@@ -411,8 +387,6 @@ function get_answer3() {
     switch (order) {
         case 2:
             document.getElementById('background').src='Photos/hall_wall.png'
-            document.getElementById('background').style.width ="1400px"
-            document.getElementById('background').style.height ="580px"
         break;
     }
     order++

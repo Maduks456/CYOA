@@ -11,7 +11,7 @@
 
 #background {
   width: 1400px;
-  height: 600px;
+  height: 570px;
 }
 
 .main {
@@ -66,7 +66,7 @@
 }
 .main_task {
   width: 100%;
-  height: 25%;
+  height: 30%;
   background-color: var(--mainPannal);
   display: flex;
   flex-direction: column;
@@ -103,21 +103,27 @@
   font-size: 20px;
   border-radius: 10px;
 }
-.main_task_answers {
+.main_task_box {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 30%;
+  height: 60%;
+}
+.main_task_box_answers {
+  width: 100%;
+  height: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.main_task_answers_answer {
+.main_task_box_answers_answer {
   display: flex;
   width: 45%;
   height: 100%;
   align-content: center;
   justify-content: center;
 }
-.main_task_answers_answer_alldays {
+.main_task_box_answers_answer_alldays {
   background-color: var(--buttons);
   color: var(--text);
   border: var(--buttons);
@@ -203,4 +209,53 @@
   width: 150px;
   height: 50px;
   border-radius: 10px;
+}
+
+@media (max-width: 760px) {
+  #background {
+    align-self: center;
+    width: 400px;
+    height: 230px;
+  }
+  .main_task_text-maintext {
+    font-size: 10px;
+    width: 150px;
+    text-align: left;
+    margin-right: 20px;
+  }
+  .main_task_box {
+    flex-direction: row;
+  }
+  .Allbutton {
+    width: 60px;
+    height: 30px;
+    font-size: 8px;
+  }
+  .main_front_Endings {
+    height: 90%;
+  }
+  .main_front_Endings-days {
+    font-size: 25px;
+  }
+  .main_front_Endings-maintext {
+    font-size: 16px;
+  }
+}
+@media (max-width: 360px) {
+  #background {
+    width: 300px;
+    height: 270px;
+  }
+  .main_task_text {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  .main_task_box {
+    flex-direction: column;
+  }
+  .Allbutton {
+    width: 70px;
+    height: 40px;
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -8,8 +8,6 @@ function Remove() {
         document.getElementById("end").style.display = 'none';
         document.getElementById("background").style.display = 'block';
         document.getElementById("background").src='Photos/out2.png'
-        document.getElementById('background').style.width ="1400px"
-        document.getElementById('background').style.height ="630px"
         order=0
         n=0
         qu= 0
