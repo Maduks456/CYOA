@@ -9,7 +9,7 @@ function Remove() {
         document.getElementById("background").style.display = 'block';
         document.getElementById("background").src='Photos/out2.png'
         order=0
-        n=0
+        narratorArray=0
         qu= 0
 }
 function ToDay2(){

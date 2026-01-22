@@ -72,7 +72,7 @@ function Next2() {
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
             if(localStorage.getItem(St1question)=="Sure" || localStorage.getItem(St2question)=="Sure" && checks==1){
-                document.getElementById("q").innerHTML = narrator2[n];
+                document.getElementById("q").innerHTML = narrator2[narratorArray];
                    if( checks==0){
                     order++
                     n=n+2
@@ -83,7 +83,7 @@ function Next2() {
                     order++
                    }
                 n++
-                document.getElementById("q").innerHTML = narrator2[n];
+                document.getElementById("q").innerHTML = narrator2[narratorArray];
                 checks++
             }
             n++
@@ -92,7 +92,7 @@ function Next2() {
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             n++
         break;
 
@@ -203,7 +203,7 @@ function getAnswer1() {
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             n=n+2
             n++
         break;
@@ -211,7 +211,7 @@ function getAnswer1() {
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             n=n+1
             order=order+2;
             qu++
@@ -236,14 +236,14 @@ function getAnswer1() {
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
             n++
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             n++
         break;
         case 17:
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             n++
         break;
         case 20:
@@ -328,7 +328,7 @@ function getAnswer2() {
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
             n++;
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             n=n+2
         break;
         case 8:
@@ -336,7 +336,7 @@ function getAnswer2() {
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
             n++;
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             order=order+2;
             qu++
             n++
@@ -359,7 +359,7 @@ function getAnswer2() {
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator2[n]
+            document.getElementById("q").innerHTML = narrator2[narratorArray]
             n=n+2
             order++
             n++
@@ -368,7 +368,7 @@ function getAnswer2() {
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             n++
         break;
         case 20:
@@ -448,7 +448,7 @@ function getAnswer3() {
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
                 n=n+2;
-                document.getElementById("q").innerHTML = narrator2[n];
+                document.getElementById("q").innerHTML = narrator2[narratorArray];
             n++
         break;
         case 8:
@@ -475,7 +475,7 @@ function getAnswer3() {
             document.getElementById("ans12").style.display = 'none';
             document.getElementById("ans22").style.display = 'none';
             document.getElementById("ans32").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator2[n];
+            document.getElementById("q").innerHTML = narrator2[narratorArray];
             n++
         break;
         case 21:

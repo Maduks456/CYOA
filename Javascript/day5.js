@@ -88,7 +88,7 @@ function Next5(){
             qu++
         break;
         case 5: case 8:
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
@@ -115,7 +115,7 @@ function Next5(){
         break;
         case 12:
             if(localStorage.getItem(questions[3])=="Perents house"){
-                document.getElementById("q").innerHTML = narrator5[n]
+                document.getElementById("q").innerHTML = narrator5[narratorArray]
                 document.getElementById("ans15").style.display = 'none';
                 document.getElementById("ans25").style.display = 'none';
                 document.getElementById("ans35").style.display = 'none';
@@ -204,21 +204,21 @@ function get_answer1() {
     localStorage.setItem(Key, Value)
     switch (order) {
         case 2: case 13:
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
             n++
         break;
         case 4: 
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
             n= n+2
         break;
         case 7:
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
@@ -280,7 +280,7 @@ function get_answer2() {
     localStorage.setItem(Key, Value)
     switch (order) {
         case 2:
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
@@ -288,7 +288,7 @@ function get_answer2() {
         break;
         case 4: case 13:
             n++
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
@@ -296,7 +296,7 @@ function get_answer2() {
         break;
         case 7:
             n++
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
@@ -358,7 +358,7 @@ function get_answer3() {
     localStorage.setItem(Key, Value)
     switch (order) {
         case 2:
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
@@ -366,7 +366,7 @@ function get_answer3() {
         break;
         case 4:
             n=6
-            document.getElementById("q").innerHTML = narrator5[n]
+            document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';

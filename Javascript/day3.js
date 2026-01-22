@@ -102,7 +102,7 @@ function Next3() {
             }
         break;
         case 8: case 9: case 13: case 14:
-            document.getElementById("q").innerHTML = narrator3[n]
+            document.getElementById("q").innerHTML = narrator3[narratorArray]
             n++
         break;
         case 12:
@@ -110,11 +110,11 @@ function Next3() {
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
             if(localStorage.getItem(questions3[3])== Answerday3box3[3]){
-                document.getElementById("q").innerHTML = narrator3[n]
+                document.getElementById("q").innerHTML = narrator3[narratorArray]
                 n++
             }else{
                 n++
-                document.getElementById("q").innerHTML = narrator3[n]
+                document.getElementById("q").innerHTML = narrator3[narratorArray]
             }
             n++
         break;
@@ -268,7 +268,7 @@ function getanswer2() {
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator3[n]
+            document.getElementById("q").innerHTML = narrator3[narratorArray]
             n++
             order=7
             qu = 3
@@ -290,7 +290,7 @@ function getanswer2() {
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
             n++
-            document.getElementById("q").innerHTML = narrator3[n]
+            document.getElementById("q").innerHTML = narrator3[narratorArray]
             n++
         break;
         case 16:
@@ -337,7 +337,7 @@ function getanswer3() {
             document.getElementById("ans13").style.display = 'none';
             document.getElementById("ans23").style.display = 'none';
             document.getElementById("ans33").style.display = 'none';
-            document.getElementById("q").innerHTML = narrator3[n]
+            document.getElementById("q").innerHTML = narrator3[narratorArray]
             n++
             n++
         break;

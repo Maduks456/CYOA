@@ -61,7 +61,7 @@
 // order of the  text/questions
 let order =1;
 // Text array number
-let n=1;
+let narratorArray=1;
 //Question array number
 let qu= 0;
 //Stundent Array number
@@ -78,7 +78,7 @@ let Narratortext2;
 function Next(){
     switch (order) {
         case 1: case 2: case 3: case 4:  case 13: case 16:
-            document.getElementById("q").innerHTML = text1[n];
+            document.getElementById("q").innerHTML = text1[narratorArray];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
@@ -154,7 +154,7 @@ function Next(){
                 }
                 qu++
             }else{
-                document.getElementById("q").innerHTML = text1[n];
+                document.getElementById("q").innerHTML = text1[narratorArray];
                 document.getElementById("ans1").style.display = 'none';
                 document.getElementById("ans2").style.display = 'none';
                 document.getElementById("ans3").style.display = 'none';
@@ -276,7 +276,7 @@ function GetAnswer1(){
     localStorage.setItem(Key, Value)
     switch (order) {
         case 6: case 8: case 10:
-            document.getElementById("q").innerHTML = text1[n];
+            document.getElementById("q").innerHTML = text1[narratorArray];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
@@ -334,7 +334,7 @@ function GetAnswer2(){
     localStorage.setItem(Key, Value)
     switch (order) {
         case 6: case 8: case 10:
-            document.getElementById("q").innerHTML = text1[n];
+            document.getElementById("q").innerHTML = text1[narratorArray];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
@@ -393,7 +393,7 @@ function GetAnswer3(){
     localStorage.setItem(Key, Value)
     switch (order) {
         case 6: case 8: case 10:
-            document.getElementById("q").innerHTML = text1[n];
+            document.getElementById("q").innerHTML = text1[narratorArray];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
@@ -414,7 +414,7 @@ function GetAnswer4(){
     localStorage.setItem(Key, Value)
     switch (order) {
         case 6: case 8:
-            document.getElementById("q").innerHTML = text1[n];
+            document.getElementById("q").innerHTML = text1[narratorArray];
             document.getElementById("ans1").style.display = 'none';
             document.getElementById("ans2").style.display = 'none';
             document.getElementById("ans3").style.display = 'none';
