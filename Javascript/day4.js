@@ -79,7 +79,7 @@ function Next4(){
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 4: case 8:
             document.getElementById("ans14").style.display = 'none';
@@ -107,7 +107,7 @@ function Next4(){
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n++
+            narratorArray++
             if(localStorage.getItem(questions4[1])=="Nothing"){
                 localStorage.setItem(questions4[1],"Not alot")
             }else if(localStorage.getItem(questions4[1])=="Not alot") {
@@ -120,27 +120,27 @@ function Next4(){
             }else{
                 document.getElementById("q").innerHTML = narrator4[narratorArray]
             }
-            n++
+            narratorArray++
         break;
         case 12:
             if (localStorage.getItem(questions4[1])== "Alot") {
                 document.getElementById("q").innerHTML = narrator4[narratorArray]
-                n++
+                narratorArray++
             }else{
-                n++
+                narratorArray++
                 document.getElementById("q").innerHTML = narrator4[narratorArray]
             }
-            n++
+            narratorArray++
         break;
         case 16:
             if(localStorage.getItem(questions2[5])==answerday2box1[5]){
                 document.getElementById("q").innerHTML = narrator4[narratorArray]
-                n++
+                narratorArray++
             }else{
-                n++
+                narratorArray++
                 document.getElementById("q").innerHTML = narrator4[narratorArray]
             }
-            n++
+            narratorArray++
         break;
         case 17:
             document.getElementById("ans12").style.display = 'none';
@@ -214,13 +214,13 @@ function Getanswer1() {
     localStorage.setItem(Key, Value)
     switch (order) {
         case 2:
-            n++
+            narratorArray++
             document.getElementById("q").innerHTML = narrator4[narratorArray]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 5:
             document.getElementById("ans14").style.display = 'none';
@@ -252,7 +252,7 @@ function Getanswer1() {
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 9:
             document.getElementById("ans14").style.display = 'none';
@@ -261,13 +261,13 @@ function Getanswer1() {
             document.getElementById("ans44").style.display = 'none';
             if (localStorage.getItem(questions4[1])=="Alot"){
                 document.getElementById("q").innerHTML = narrator4[narratorArray]
-                n=n+3
+                narratorArray=narratorArray+3
                 order=11
             }else{
-                n++
+                narratorArray++
                 document.getElementById("q").innerHTML = narrator4[narratorArray]
             }
-            n++
+            narratorArray++
         break;
     }
     order++
@@ -283,7 +283,7 @@ function Getanswer2() {
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n=n+2
+            narratorArray=narratorArray+2
         break;
         case 5:
             document.getElementById("ans14").style.display = 'none';
@@ -315,16 +315,16 @@ function Getanswer2() {
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 9:
-            n = n+2
+            narratorArray= narratorArray+2
             document.getElementById("q").innerHTML = narrator4[narratorArray]
             document.getElementById("ans14").style.display = 'none';
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n++
+            narratorArray++
             if(localStorage.getItem(questions4[1])=="Nothing"){
                 localStorage.setItem(questions4[1],"Not alot")
             }else if(localStorage.getItem(questions4[1])=="Not alot") {
@@ -346,7 +346,7 @@ function Getanswer3() {
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n=n+2
+            narratorArray=narratorArray+2
         break;
         case 5:
             document.getElementById("ans14").style.display = 'none';
@@ -378,7 +378,7 @@ function Getanswer3() {
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n++
+            narratorArray++
         break;
     }
     order++ 
@@ -394,7 +394,7 @@ function Getanswer4() {
             document.getElementById("ans24").style.display = 'none';
             document.getElementById("ans34").style.display = 'none';
             document.getElementById("ans44").style.display = 'none';
-            n=n+2
+            narratorArray=narratorArray+2
         break;
     }
     order++

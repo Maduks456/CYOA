@@ -92,7 +92,7 @@ function Next5(){
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 9:
             document.getElementById("q").innerHTML = questions5[qu]
@@ -208,21 +208,21 @@ function get_answer1() {
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 4: 
             document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n= n+2
+            narratorArray=narratorArray+2 
         break;
         case 7:
             document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n= n+3
+            narratorArray=narratorArray+3 
         break;
         case 10:
             document.getElementById("q").innerHTML = questions5[qu]
@@ -244,13 +244,13 @@ function get_answer1() {
             qu++
         break;
         case 11:
-            let start= narrator5[n].slice(0,11)
-            let end= narrator5[n].slice(11,31)
+            let start= narrator5[narratorArray].slice(0,11)
+            let end= narrator5[narratorArray].slice(11,31)
             document.getElementById("q").innerHTML = start+localStorage.getItem(questions5[4]).toLowerCase()+end
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
         break;
     }
     switch (order) {
@@ -284,23 +284,23 @@ function get_answer2() {
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 4: case 13:
-            n++
+            narratorArray++
             document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 7:
-            n++
+            narratorArray++
             document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n= n+2
+            narratorArray=narratorArray+2 
         break;
         case 10:
             document.getElementById("q").innerHTML = questions5[qu]
@@ -322,13 +322,13 @@ function get_answer2() {
             qu++
         break;
         case 11:
-            let start= narrator5[n].slice(0,11)
-            let end= narrator5[n].slice(11,31)
+            let start= narrator5[narratorArray].slice(0,11)
+            let end= narrator5[narratorArray].slice(11,31)
             document.getElementById("q").innerHTML = start+localStorage.getItem(questions5[4]).toLowerCase()+end
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
         break;
     }
     switch (order) {
@@ -362,26 +362,26 @@ function get_answer3() {
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
         break;
         case 4:
-            n=6
+            narratorArray=66
             document.getElementById("q").innerHTML = narrator5[narratorArray]
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
             order = 7
             qu++
         break;
         case 11:
-            let start= narrator5[n].slice(0,11)
-            let end= narrator5[n].slice(11,31)
+            let start= narrator5[narratorArray].slice(0,11)
+            let end= narrator5[narratorArray].slice(11,31)
             document.getElementById("q").innerHTML = start+localStorage.getItem(questions5[4]).toLowerCase()+end
             document.getElementById("ans15").style.display = 'none';
             document.getElementById("ans25").style.display = 'none';
             document.getElementById("ans35").style.display = 'none';
-            n++
+            narratorArray++
         break;
     }
     switch (order) {
